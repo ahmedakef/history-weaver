@@ -257,7 +257,7 @@ export default function Timeline({ figures, allFigures, categoryDefs }: Props) {
                   {resolveTranslation(selectedFigure.name, lang)}
                 </h2>
                 <p className="text-sm text-muted-foreground mt-1">
-                  {formatRange(selectedFigure.born, selectedFigure.died, calendar)}
+                  {formatRange(selectedFigure.born, selectedFigure.died, calendar, lang)}
                 </p>
                 <div className="flex gap-2 mt-2">
                   {selectedFigure.categories.map((cat) => (
