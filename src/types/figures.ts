@@ -22,6 +22,7 @@ export interface Figure {
   died: number;
   categories: string[];
   description: Translatable;
+  image?: string;
   relations?: Relation[];
   wikipedia?: Record<string, string>;
 }

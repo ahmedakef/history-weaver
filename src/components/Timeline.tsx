@@ -304,26 +304,35 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
             className="mt-8 rounded-xl border bg-card p-6 shadow-md"
           >
             <div className="flex items-start justify-between gap-4">
-              <div>
-                <h2 className="text-2xl font-display font-bold">
-                  {resolveTranslation(selectedFigure.name, lang)}
-                </h2>
-                <p className="text-sm text-muted-foreground mt-1">
-                  {formatRange(selectedFigure.born, selectedFigure.died, calendar, lang)}
-                </p>
-                <div className="flex gap-2 mt-2 flex-wrap">
-                  {selectedFigure.categories.map((cat) => {
-                    const root = getRootColor(cat);
-                    const colorClass = ROOT_CAT_COLORS[root] || "bg-muted";
-                    return (
-                      <span
-                        key={cat}
-                        className={`${colorClass} text-primary-foreground text-xs px-2.5 py-0.5 rounded-full font-medium`}
-                      >
-                        {catNameMap.get(cat) || cat}
-                      </span>
-                    );
-                  })}
+              <div className="flex gap-4">
+                {selectedFigure.image && (
+                  <img
+                    src={selectedFigure.image}
+                    alt={resolveTranslation(selectedFigure.name, lang)}
+                    className="w-20 h-20 rounded-lg object-cover border shadow-sm shrink-0"
+                  />
+                )}
+                <div>
+                  <h2 className="text-2xl font-display font-bold">
+                    {resolveTranslation(selectedFigure.name, lang)}
+                  </h2>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    {formatRange(selectedFigure.born, selectedFigure.died, calendar, lang)}
+                  </p>
+                  <div className="flex gap-2 mt-2 flex-wrap">
+                    {selectedFigure.categories.map((cat) => {
+                      const root = getRootColor(cat);
+                      const colorClass = ROOT_CAT_COLORS[root] || "bg-muted";
+                      return (
+                        <span
+                          key={cat}
+                          className={`${colorClass} text-primary-foreground text-xs px-2.5 py-0.5 rounded-full font-medium`}
+                        >
+                          {catNameMap.get(cat) || cat}
+                        </span>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
               <button
