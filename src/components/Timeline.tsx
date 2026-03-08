@@ -266,7 +266,7 @@ export default function Timeline({ figures, allFigures, categoryDefs }: Props) {
                       key={cat}
                       className={`${CAT_COLORS[cat]} text-primary-foreground text-xs px-2.5 py-0.5 rounded-full font-medium capitalize`}
                     >
-                      {t(cat)}
+                      {catNameMap.get(cat) || cat}
                     </span>
                   ))}
                 </div>
