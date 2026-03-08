@@ -1,6 +1,26 @@
 # =============================================================
 # Historical Figures Database
 # =============================================================
+#
+# CATEGORIES LIST (used for display labels):
+
+categories:
+  - id: science
+    name:
+      en: Science
+      ar: علوم
+  - id: religion
+    name:
+      en: Religion
+      ar: دين
+  - id: authority
+    name:
+      en: Authority
+      ar: سلطة
+  - id: philosophy
+    name:
+      en: Philosophy
+      ar: فلسفة
 # HOW TO ADD A NEW PERSON:
 #
 # Copy the template below and fill in the details:

@@ -1,4 +1,4 @@
-import type { Figure, Category } from "@/types/figures";
+import type { Figure, Category, CategoryDef } from "@/types/figures";
 import { resolveTranslation } from "@/types/figures";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useMemo, useRef, useCallback, useEffect } from "react";
@@ -22,10 +22,17 @@ const CAT_BORDER_COLORS: Record<Category, string> = {
 interface Props {
   figures: Figure[];
   allFigures: Figure[];
+  categoryDefs: CategoryDef[];
 }
 
-export default function Timeline({ figures, allFigures }: Props) {
+export default function Timeline({ figures, allFigures, categoryDefs }: Props) {
   const { lang, calendar, t } = useI18n();
+
+  const catNameMap = useMemo(() => {
+    const m = new Map<string, string>();
+    categoryDefs.forEach((c) => m.set(c.id, resolveTranslation(c.name, lang)));
+    return m;
+  }, [categoryDefs, lang]);
   const [selected, setSelected] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const figureRefs = useRef<Record<string, HTMLDivElement | null>>({});
@@ -259,7 +266,7 @@ export default function Timeline({ figures, allFigures }: Props) {
                       key={cat}
                       className={`${CAT_COLORS[cat]} text-primary-foreground text-xs px-2.5 py-0.5 rounded-full font-medium capitalize`}
                     >
-                      {t(cat)}
+                      {catNameMap.get(cat) || cat}
                     </span>
                   ))}
                 </div>

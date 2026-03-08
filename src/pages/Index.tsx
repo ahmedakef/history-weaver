@@ -17,7 +17,7 @@ const Index = () => {
     );
   }, []);
 
-  const { filtered, allFigures, isLoading, error } =
+  const { filtered, allFigures, isLoading, error, categoryDefs } =
     useFigures(activeCategories);
 
   return (
@@ -59,7 +59,7 @@ const Index = () => {
           <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3 font-body">
             {t("filter_label")}
           </h2>
-          <CategoryFilter active={activeCategories} onToggle={toggleCategory} />
+          <CategoryFilter active={activeCategories} onToggle={toggleCategory} categoryDefs={categoryDefs} />
         </motion.div>
 
         {/* Timeline */}
@@ -83,7 +83,7 @@ const Index = () => {
             className="overflow-x-auto pb-4"
           >
             <div className="min-w-[800px]">
-              <Timeline figures={filtered} allFigures={allFigures} />
+              <Timeline figures={filtered} allFigures={allFigures} categoryDefs={categoryDefs} />
             </div>
           </motion.div>
         )}

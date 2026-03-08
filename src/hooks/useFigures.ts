@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { loadFigures } from "@/lib/loadFigures";
-import type { Category, Figure } from "@/types/figures";
+import type { Category, Figure, CategoryDef } from "@/types/figures";
 
 export function useFigures(activeCategories: Category[]) {
   const query = useQuery({
@@ -9,6 +9,7 @@ export function useFigures(activeCategories: Category[]) {
   });
 
   const allFigures = query.data?.figures ?? [];
+  const categoryDefs = query.data?.categories ?? [];
 
   const filtered =
     activeCategories.length === 0
@@ -17,5 +18,5 @@ export function useFigures(activeCategories: Category[]) {
           f.categories.some((c) => activeCategories.includes(c))
         );
 
-  return { ...query, allFigures, filtered };
+  return { ...query, allFigures, filtered, categoryDefs };
 }
