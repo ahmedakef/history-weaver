@@ -24,6 +24,7 @@ const translations: Record<Language, Record<string, string>> = {
     footer_note: "Data is stored in",
     footer_edit: "— edit it to add more historical figures",
     relations: "Relations",
+    wikipedia: "Wikipedia",
     
     language: "Language",
     calendar: "Calendar",
