@@ -22,10 +22,17 @@ const CAT_BORDER_COLORS: Record<Category, string> = {
 interface Props {
   figures: Figure[];
   allFigures: Figure[];
+  categoryDefs: CategoryDef[];
 }
 
-export default function Timeline({ figures, allFigures }: Props) {
+export default function Timeline({ figures, allFigures, categoryDefs }: Props) {
   const { lang, calendar, t } = useI18n();
+
+  const catNameMap = useMemo(() => {
+    const m = new Map<string, string>();
+    categoryDefs.forEach((c) => m.set(c.id, resolveTranslation(c.name, lang)));
+    return m;
+  }, [categoryDefs, lang]);
   const [selected, setSelected] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const figureRefs = useRef<Record<string, HTMLDivElement | null>>({});
