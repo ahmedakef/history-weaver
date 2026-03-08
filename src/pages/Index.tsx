@@ -91,9 +91,14 @@ const Index = () => {
         {/* Footer note */}
         <div className="mt-12 text-center text-xs text-muted-foreground border-t pt-6">
           {t("footer_note")}{" "}
-          <code className="bg-secondary px-1.5 py-0.5 rounded text-xs">
+          <a
+            href="https://github.com/ahmedakef/history-weaver/edit/main/public/data/figures.yaml"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-secondary px-1.5 py-0.5 rounded text-xs font-mono text-primary underline underline-offset-2 hover:text-primary/80 transition-colors"
+          >
             public/data/figures.yaml
-          </code>{" "}
+          </a>{" "}
           {t("footer_edit")}
         </div>
       </main>
