@@ -42,6 +42,7 @@ const translations: Record<Language, Record<string, string>> = {
     footer_note: "البيانات مخزنة في",
     footer_edit: "— عدّلها لإضافة المزيد من الشخصيات التاريخية",
     relations: "العلاقات",
+    wikipedia: "ويكيبيديا",
     language: "اللغة",
     calendar: "التقويم",
     gregorian: "ميلادي",
