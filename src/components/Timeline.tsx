@@ -1,18 +1,19 @@
-import type { Figure, Category, CategoryDef, RelationTypeDef } from "@/types/figures";
-import { resolveTranslation } from "@/types/figures";
+import type { Figure, CategoryDef, RelationTypeDef } from "@/types/figures";
+import { resolveTranslation, flattenCategories } from "@/types/figures";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useMemo, useRef, useCallback, useEffect } from "react";
 import { useI18n } from "@/lib/i18n";
 import { formatRange, formatYear, gregorianToHijri } from "@/lib/hijri";
 
-const CAT_COLORS: Record<Category, string> = {
+/** Root-level category color classes */
+const ROOT_CAT_COLORS: Record<string, string> = {
   science: "bg-science",
   religion: "bg-religion",
   authority: "bg-authority",
   philosophy: "bg-philosophy",
 };
 
-const CAT_BORDER_COLORS: Record<Category, string> = {
+const ROOT_CAT_BORDER: Record<string, string> = {
   science: "border-science",
   religion: "border-religion",
   authority: "border-authority",
@@ -24,22 +25,26 @@ interface Props {
   allFigures: Figure[];
   categoryDefs: CategoryDef[];
   relationTypeDefs: RelationTypeDef[];
+  rootMap: Map<string, string>;
 }
 
-export default function Timeline({ figures, allFigures, categoryDefs, relationTypeDefs }: Props) {
+export default function Timeline({ figures, allFigures, categoryDefs, relationTypeDefs, rootMap }: Props) {
   const { lang, calendar, t } = useI18n();
+
+  const allCatDefs = useMemo(() => flattenCategories(categoryDefs), [categoryDefs]);
 
   const catNameMap = useMemo(() => {
     const m = new Map<string, string>();
-    categoryDefs.forEach((c) => m.set(c.id, resolveTranslation(c.name, lang)));
+    allCatDefs.forEach((c) => m.set(c.id, resolveTranslation(c.name, lang)));
     return m;
-  }, [categoryDefs, lang]);
+  }, [allCatDefs, lang]);
 
   const relTypeNameMap = useMemo(() => {
     const m = new Map<string, string>();
     relationTypeDefs.forEach((r) => m.set(r.id, resolveTranslation(r.name, lang)));
     return m;
   }, [relationTypeDefs, lang]);
+
   const [selected, setSelected] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const figureRefs = useRef<Record<string, HTMLDivElement | null>>({});
@@ -127,7 +132,7 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
     }
 
     setLines(newLines);
-  }, [selected, figureMap, t]);
+  }, [selected, figureMap, relTypeNameMap]);
 
   useEffect(() => {
     computeLines();
@@ -139,6 +144,9 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
     if (!selectedFigure?.relations) return new Set<string>();
     return new Set(selectedFigure.relations.map((r) => r.target));
   }, [selectedFigure]);
+
+  /** Get the root category color for a figure (uses first category) */
+  const getRootColor = (catId: string) => rootMap.get(catId) || catId;
 
   const formatTickYear = (year: number) => {
     return formatYear(year, calendar, lang).replace(/ (AH|CE|هـ|م)$/, '');
@@ -197,7 +205,8 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
             const isSelected = selected === figure.id;
             const isRelated = relatedIds.has(figure.id);
             const dimmed = selected && !isSelected && !isRelated;
-            const primaryCat = figure.categories[0] as Category;
+            const primaryRoot = getRootColor(figure.categories[0]);
+            const borderClass = ROOT_CAT_BORDER[primaryRoot] || "border-border";
 
             return (
               <motion.div
@@ -216,7 +225,7 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
                 className={`
                   absolute cursor-pointer rounded-lg border-2 px-3 py-1.5
                   transition-shadow font-body
-                  ${CAT_BORDER_COLORS[primaryCat]}
+                  ${borderClass}
                   ${isSelected ? "shadow-lg z-20 ring-2 ring-primary/30" : "shadow-sm z-0"}
                   bg-card hover:shadow-md
                 `}
@@ -229,12 +238,16 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
               >
                 <div className="flex items-center gap-2 min-w-0">
                   <div className="flex gap-1 shrink-0">
-                    {figure.categories.map((cat) => (
-                      <span
-                        key={cat}
-                        className={`inline-block h-2 w-2 rounded-full ${CAT_COLORS[cat]}`}
-                      />
-                    ))}
+                    {figure.categories.map((cat) => {
+                      const root = getRootColor(cat);
+                      const colorClass = ROOT_CAT_COLORS[root] || "bg-muted";
+                      return (
+                        <span
+                          key={cat}
+                          className={`inline-block h-2 w-2 rounded-full ${colorClass}`}
+                        />
+                      );
+                    })}
                   </div>
                   <span className="text-sm font-semibold truncate">
                     {resolveTranslation(figure.name, lang)}
@@ -266,15 +279,19 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
                 <p className="text-sm text-muted-foreground mt-1">
                   {formatRange(selectedFigure.born, selectedFigure.died, calendar, lang)}
                 </p>
-                <div className="flex gap-2 mt-2">
-                  {selectedFigure.categories.map((cat) => (
-                    <span
-                      key={cat}
-                      className={`${CAT_COLORS[cat]} text-primary-foreground text-xs px-2.5 py-0.5 rounded-full font-medium capitalize`}
-                    >
-                      {catNameMap.get(cat) || cat}
-                    </span>
-                  ))}
+                <div className="flex gap-2 mt-2 flex-wrap">
+                  {selectedFigure.categories.map((cat) => {
+                    const root = getRootColor(cat);
+                    const colorClass = ROOT_CAT_COLORS[root] || "bg-muted";
+                    return (
+                      <span
+                        key={cat}
+                        className={`${colorClass} text-primary-foreground text-xs px-2.5 py-0.5 rounded-full font-medium`}
+                      >
+                        {catNameMap.get(cat) || cat}
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
               <button

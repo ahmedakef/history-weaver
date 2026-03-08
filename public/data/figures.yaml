@@ -9,10 +9,45 @@ categories:
     name:
       en: Science
       ar: علوم
+    children:
+      - id: mathematics
+        name:
+          en: Mathematics
+          ar: رياضيات
+      - id: medicine
+        name:
+          en: Medicine
+          ar: طب
+      - id: optics
+        name:
+          en: Optics
+          ar: بصريات
+      - id: astronomy
+        name:
+          en: Astronomy
+          ar: فلك
   - id: religion
     name:
       en: Religion
       ar: دين
+    children:
+      - id: islam
+        name:
+          en: Islam
+          ar: إسلام
+        children:
+          - id: fiqh
+            name:
+              en: Fiqh
+              ar: فقه
+          - id: hadith
+            name:
+              en: Hadith
+              ar: حديث
+          - id: kalam
+            name:
+              en: Kalām (Theology)
+              ar: علم الكلام
   - id: authority
     name:
       en: Authority
@@ -61,8 +96,8 @@ relation_types:
 #       ar: الاسم الكامل       #   Arabic name (optional)
 #     born: 1000              # Year of birth (Gregorian)
 #     died: 1100              # Year of death (Gregorian)
-#     categories:             # One or more of: science, religion, authority, philosophy
-#       - science
+#     categories:             # One or more category ids (can be subcategories)
+#       - mathematics
 #     description:            # Description supports multiple languages:
 #       en: A short bio in English
 #       ar: نبذة مختصرة بالعربية  # (optional)
@@ -70,9 +105,8 @@ relation_types:
 #       - type: father_of     # Options: father_of, mother_of, child_of, teacher_of, student_of, influenced, colleague
 #         target: other_id    # The id of the related person
 #
-# NOTE: For name and description, you can also use a plain string
-#       if you only need one language:
-#         name: Ahmed ibn Ali
+# NOTE: Figures tagged with a subcategory (e.g. "fiqh") are automatically
+#       included when filtering by any parent category (e.g. "religion").
 #
 # =============================================================
 
@@ -87,8 +121,8 @@ figures:
     born: 1000
     died: 1100
     categories:
-      - science
-      - religion
+      - mathematics
+      - kalam
     description:
       en: >
         A renowned scholar of mathematics and theology in Baghdad.
@@ -109,7 +143,8 @@ figures:
     born: 1050
     died: 1120
     categories:
-      - science
+      - optics
+      - astronomy
     description:
       en: >
         Son of Ahmed ibn Ali. Continued his father's work in mathematics
@@ -130,7 +165,8 @@ figures:
     born: 965
     died: 1040
     categories:
-      - science
+      - optics
+      - mathematics
     description:
       en: >
         The father of modern optics. His Book of Optics fundamentally
@@ -152,7 +188,8 @@ figures:
     born: 1058
     died: 1111
     categories:
-      - religion
+      - kalam
+      - fiqh
       - philosophy
     description:
       en: >
@@ -180,7 +217,6 @@ figures:
       ar: >
         أول سلطان لمصر والشام، مؤسس الدولة الأيوبية.
         معروف باستعادة القدس خلال الحروب الصليبية.
-
     wikipedia:
       en: https://en.wikipedia.org/wiki/Saladin
       ar: https://ar.wikipedia.org/wiki/صلاح_الدين_الأيوبي
@@ -193,7 +229,7 @@ figures:
     died: 1198
     categories:
       - philosophy
-      - science
+      - fiqh
     description:
       en: >
         Andalusian philosopher and polymath. His commentaries on Aristotle
@@ -215,7 +251,7 @@ figures:
     born: 980
     died: 1037
     categories:
-      - science
+      - medicine
       - philosophy
     description:
       en: >
@@ -224,7 +260,6 @@ figures:
       ar: >
         عالم موسوعي فارسي يُعتبر أبا الطب الحديث المبكر.
         كان كتابه "القانون في الطب" مرجعًا طبيًا لقرون.
-
     wikipedia:
       en: https://en.wikipedia.org/wiki/Avicenna
       ar: https://ar.wikipedia.org/wiki/ابن_سينا
@@ -258,7 +293,8 @@ figures:
     born: 1048
     died: 1131
     categories:
-      - science
+      - mathematics
+      - astronomy
       - philosophy
     description:
       en: >
@@ -267,7 +303,6 @@ figures:
       ar: >
         عالم رياضيات وفلكي وشاعر فارسي. معروف بأعماله في
         المعادلات التكعيبية ومجموعة الرباعيات الشهيرة.
-
     wikipedia:
       en: https://en.wikipedia.org/wiki/Omar_Khayyam
       ar: https://ar.wikipedia.org/wiki/عمر_الخيام
@@ -279,7 +314,8 @@ figures:
     born: 973
     died: 1048
     categories:
-      - science
+      - mathematics
+      - astronomy
     description:
       en: >
         A polymath who excelled in mathematics, astronomy, and natural sciences.

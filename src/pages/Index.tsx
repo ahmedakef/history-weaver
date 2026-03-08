@@ -1,6 +1,5 @@
 import { useState, useCallback } from "react";
 import { useFigures } from "@/hooks/useFigures";
-import type { Category } from "@/types/figures";
 import CategoryFilter from "@/components/CategoryFilter";
 import Timeline from "@/components/Timeline";
 import LanguageCalendarControls from "@/components/LanguageCalendarControls";
@@ -8,16 +7,16 @@ import { motion } from "framer-motion";
 import { useI18n } from "@/lib/i18n";
 
 const Index = () => {
-  const [activeCategories, setActiveCategories] = useState<Category[]>([]);
+  const [activeCategories, setActiveCategories] = useState<string[]>([]);
   const { t, dir } = useI18n();
 
-  const toggleCategory = useCallback((cat: Category) => {
+  const toggleCategory = useCallback((cat: string) => {
     setActiveCategories((prev) =>
       prev.includes(cat) ? prev.filter((c) => c !== cat) : [...prev, cat]
     );
   }, []);
 
-  const { filtered, allFigures, isLoading, error, categoryDefs, relationTypeDefs } =
+  const { filtered, allFigures, isLoading, error, categoryDefs, relationTypeDefs, rootMap } =
     useFigures(activeCategories);
 
   return (
@@ -83,7 +82,7 @@ const Index = () => {
             className="overflow-x-auto pb-4"
           >
             <div className="min-w-[800px]">
-              <Timeline figures={filtered} allFigures={allFigures} categoryDefs={categoryDefs} relationTypeDefs={relationTypeDefs} />
+              <Timeline figures={filtered} allFigures={allFigures} categoryDefs={categoryDefs} relationTypeDefs={relationTypeDefs} rootMap={rootMap} />
             </div>
           </motion.div>
         )}
