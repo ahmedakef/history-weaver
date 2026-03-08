@@ -1,4 +1,4 @@
-import type { Figure, Category, CategoryDef } from "@/types/figures";
+import type { Figure, Category, CategoryDef, RelationTypeDef } from "@/types/figures";
 import { resolveTranslation } from "@/types/figures";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useMemo, useRef, useCallback, useEffect } from "react";
@@ -23,9 +23,10 @@ interface Props {
   figures: Figure[];
   allFigures: Figure[];
   categoryDefs: CategoryDef[];
+  relationTypeDefs: RelationTypeDef[];
 }
 
-export default function Timeline({ figures, allFigures, categoryDefs }: Props) {
+export default function Timeline({ figures, allFigures, categoryDefs, relationTypeDefs }: Props) {
   const { lang, calendar, t } = useI18n();
 
   const catNameMap = useMemo(() => {
@@ -33,6 +34,12 @@ export default function Timeline({ figures, allFigures, categoryDefs }: Props) {
     categoryDefs.forEach((c) => m.set(c.id, resolveTranslation(c.name, lang)));
     return m;
   }, [categoryDefs, lang]);
+
+  const relTypeNameMap = useMemo(() => {
+    const m = new Map<string, string>();
+    relationTypeDefs.forEach((r) => m.set(r.id, resolveTranslation(r.name, lang)));
+    return m;
+  }, [relationTypeDefs, lang]);
   const [selected, setSelected] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const figureRefs = useRef<Record<string, HTMLDivElement | null>>({});
@@ -115,7 +122,7 @@ export default function Timeline({ figures, allFigures, categoryDefs }: Props) {
         y1: srcRect.top + srcRect.height / 2 - containerRect.top,
         x2: tgtRect.left + tgtRect.width / 2 - containerRect.left,
         y2: tgtRect.top + tgtRect.height / 2 - containerRect.top,
-        label: t(rel.type) || rel.type,
+        label: relTypeNameMap.get(rel.type) || rel.type,
       });
     }
 
@@ -295,7 +302,7 @@ export default function Timeline({ figures, allFigures, categoryDefs }: Props) {
                         className="text-sm bg-secondary hover:bg-secondary/80 rounded-lg px-3 py-1.5 transition-colors"
                       >
                         <span className="text-muted-foreground">
-                          {t(rel.type)}
+                          {relTypeNameMap.get(rel.type) || rel.type}
                         </span>{" "}
                         <span className="font-medium">
                           {target ? resolveTranslation(target.name, lang) : rel.target}
