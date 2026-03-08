@@ -96,6 +96,8 @@ figures:
       ar: >
         عالم مشهور في الرياضيات واللاهوت في بغداد.
         معروف بإسهاماته في الجبر والدراسات القرآنية.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Ahmed_ibn_Ali
     relations:
       - type: father_of
         target: mohamed_ibn_ahmed
