@@ -17,7 +17,7 @@ const Index = () => {
     );
   }, []);
 
-  const { filtered, allFigures, isLoading, error, categoryDefs } =
+  const { filtered, allFigures, isLoading, error, categoryDefs, relationTypeDefs } =
     useFigures(activeCategories);
 
   return (
