@@ -138,6 +138,9 @@ figures:
       ar: >
         أبو البصريات الحديثة. كتابه "المناظر" غيّر بشكل جذري
         فهم الضوء والرؤية.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Ibn_al-Haytham
+      ar: https://ar.wikipedia.org/wiki/ابن_الهيثم
     relations:
       - type: teacher_of
         target: mohamed_ibn_ahmed
@@ -158,6 +161,9 @@ figures:
       ar: >
         أحد أكثر علماء المسلمين تأثيرًا في اللاهوت والفلسفة.
         أعاد كتابه "تهافت الفلاسفة" تشكيل الفكر الإسلامي.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Al-Ghazali
+      ar: https://ar.wikipedia.org/wiki/أبو_حامد_الغزالي
 
   - id: saladin
     name:
