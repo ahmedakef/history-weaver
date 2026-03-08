@@ -26,6 +26,18 @@ categories:
         name:
           en: Astronomy
           ar: فلك
+      - id: physics
+        name:
+          en: Physics
+          ar: فيزياء
+      - id: computer_science
+        name:
+          en: Computer Science
+          ar: علوم حاسوب
+      - id: poetry
+        name:
+          en: Poetry
+          ar: شعر
   - id: religion
     name:
       en: Religion
