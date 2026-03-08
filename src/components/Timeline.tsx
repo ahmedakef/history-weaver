@@ -49,7 +49,7 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
   const containerRef = useRef<HTMLDivElement>(null);
   const figureRefs = useRef<Record<string, HTMLDivElement | null>>({});
   const [lines, setLines] = useState<
-    { x1: number; y1: number; x2: number; y2: number; label: string }[]
+    { x1: number; y1: number; x2: number; y2: number; path: string; labelX: number; labelY: number; label: string }[]
   >([]);
 
   const figureMap = useMemo(() => {
@@ -122,11 +122,25 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
       const srcRect = srcEl.getBoundingClientRect();
       const tgtRect = tgtEl.getBoundingClientRect();
 
+      const x1 = srcRect.left + srcRect.width / 2 - containerRect.left;
+      const y1 = srcRect.top + srcRect.height / 2 - containerRect.top;
+      const x2 = tgtRect.left + tgtRect.width / 2 - containerRect.left;
+      const y2 = tgtRect.top + tgtRect.height / 2 - containerRect.top;
+
+      // Create a curved path that arcs above/below the bars
+      const dx = x2 - x1;
+      const dy = y2 - y1;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      const curveOffset = Math.min(dist * 0.4, 120) * (y2 >= y1 ? -1 : 1);
+
+      const mx = (x1 + x2) / 2;
+      const my = (y1 + y2) / 2 + curveOffset;
+
       newLines.push({
-        x1: srcRect.left + srcRect.width / 2 - containerRect.left,
-        y1: srcRect.top + srcRect.height / 2 - containerRect.top,
-        x2: tgtRect.left + tgtRect.width / 2 - containerRect.left,
-        y2: tgtRect.top + tgtRect.height / 2 - containerRect.top,
+        x1, y1, x2, y2,
+        path: `M ${x1} ${y1} Q ${mx} ${my} ${x2} ${y2}`,
+        labelX: mx,
+        labelY: my,
         label: relTypeNameMap.get(rel.type) || rel.type,
       });
     }
@@ -156,21 +170,39 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
     <div className="relative" ref={containerRef}>
       {/* SVG overlay for relation lines */}
       <svg className="absolute inset-0 w-full h-full pointer-events-none z-10">
+        <defs>
+          <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+            <path d="M 0 0 L 8 3 L 0 6 Z" fill="hsl(var(--primary))" fillOpacity="0.6" />
+          </marker>
+        </defs>
         <AnimatePresence>
-          {lines.map((line) => (
-            <motion.line
-              key={`${line.x1}-${line.y1}-${line.x2}-${line.y2}`}
-              x1={line.x1}
-              y1={line.y1}
-              x2={line.x2}
-              y2={line.y2}
-              stroke="hsl(var(--primary))"
-              strokeWidth={2}
-              strokeDasharray="6 4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.6 }}
-              exit={{ opacity: 0 }}
-            />
+          {lines.map((line, i) => (
+            <g key={`${line.x1}-${line.y1}-${line.x2}-${line.y2}-${i}`}>
+              <motion.path
+                d={line.path}
+                fill="none"
+                stroke="hsl(var(--primary))"
+                strokeWidth={1.5}
+                strokeDasharray="6 4"
+                markerEnd="url(#arrowhead)"
+                initial={{ opacity: 0, pathLength: 0 }}
+                animate={{ opacity: 0.5, pathLength: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              />
+              <motion.text
+                x={line.labelX}
+                y={line.labelY - 6}
+                textAnchor="middle"
+                fontSize="10"
+                fill="hsl(var(--muted-foreground))"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.7 }}
+                exit={{ opacity: 0 }}
+              >
+                {line.label}
+              </motion.text>
+            </g>
           ))}
         </AnimatePresence>
       </svg>
