@@ -131,6 +131,317 @@ relation_types:
 
 figures:
 
+  # ---- Prophet Muhammad & the Rashidun ----
+
+  - id: prophet_muhammad
+    name:
+      en: Prophet Muhammad ﷺ
+      ar: النبي محمد ﷺ
+    born: 570
+    died: 632
+    categories:
+      - islam
+    description:
+      en: >
+        The final prophet and messenger of God in Islam. Born in Mecca,
+        he received the first revelation at age 40 and spent 23 years
+        conveying the Quran. He established the first Muslim community
+        in Medina and unified the Arabian Peninsula under Islam.
+      ar: >
+        خاتم الأنبياء والمرسلين في الإسلام. وُلد في مكة وتلقى الوحي
+        الأول في سن الأربعين وأمضى 23 عاماً في تبليغ القرآن. أسّس
+        أول مجتمع إسلامي في المدينة ووحّد شبه الجزيرة العربية تحت الإسلام.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Calligraphic_representation_of_Muhammad%27s_name.jpg/330px-Calligraphic_representation_of_Muhammad%27s_name.jpg
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Muhammad
+      ar: https://ar.wikipedia.org/wiki/محمد
+    relations:
+      - type: father_of
+        target: fatimah
+      - type: teacher_of
+        target: abu_bakr
+      - type: teacher_of
+        target: umar
+      - type: teacher_of
+        target: uthman
+      - type: teacher_of
+        target: ali
+
+  - id: abu_bakr
+    name:
+      en: Abu Bakr al-Siddiq
+      ar: أبو بكر الصديق
+    born: 573
+    died: 634
+    categories:
+      - islam
+      - authority
+    description:
+      en: >
+        The first Rashidun caliph and one of the closest companions of
+        Prophet Muhammad. He was the first free adult male to accept Islam
+        and led the Muslim community after the Prophet's death, unifying
+        Arabia during the Ridda wars.
+      ar: >
+        أول الخلفاء الراشدين وأقرب أصحاب النبي محمد. كان أول رجل حر
+        بالغ يعتنق الإسلام وقاد الأمة الإسلامية بعد وفاة النبي
+        ووحّد الجزيرة العربية في حروب الردة.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Rashidun_Caliph_Abu_Bakr_as-Ṣiddīq_%28Abdullah_ibn_Abi_Quhafa%29_-_أبو_بكر_الصديق_عبد_الله_بن_أبي_قحافة.svg/330px-Rashidun_Caliph_Abu_Bakr_as-Ṣiddīq_%28Abdullah_ibn_Abi_Quhafa%29_-_أبو_بكر_الصديق_عبد_الله_بن_أبي_قحافة.svg.png
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Abu_Bakr
+      ar: https://ar.wikipedia.org/wiki/أبو_بكر_الصديق
+    relations:
+      - type: student_of
+        target: prophet_muhammad
+      - type: father_of
+        target: aisha
+
+  - id: umar
+    name:
+      en: Umar ibn al-Khattab
+      ar: عمر بن الخطاب
+    born: 584
+    died: 644
+    categories:
+      - islam
+      - authority
+    description:
+      en: >
+        The second Rashidun caliph, known for his strong leadership and
+        justice. Under his rule, the Islamic empire expanded dramatically
+        to include Persia, the Levant, and Egypt. He established many
+        administrative institutions including the Islamic calendar.
+      ar: >
+        ثاني الخلفاء الراشدين، عُرف بقيادته القوية وعدله. في عهده
+        توسّعت الدولة الإسلامية لتشمل فارس والشام ومصر. أسّس
+        مؤسسات إدارية عديدة منها التقويم الهجري.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Rashidun_Caliph_Umar_ibn_Al-Khattab_-_عمر_بن_الخطاب_ثاني_الخلفاء_الراشدين.svg/330px-Rashidun_Caliph_Umar_ibn_Al-Khattab_-_عمر_بن_الخطاب_ثاني_الخلفاء_الراشدين.svg.png
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Umar
+      ar: https://ar.wikipedia.org/wiki/عمر_بن_الخطاب
+    relations:
+      - type: student_of
+        target: prophet_muhammad
+
+  - id: uthman
+    name:
+      en: Uthman ibn Affan
+      ar: عثمان بن عفان
+    born: 576
+    died: 656
+    categories:
+      - islam
+      - authority
+    description:
+      en: >
+        The third Rashidun caliph, known as "Dhun-Nurayn" (possessor of
+        two lights) for marrying two of the Prophet's daughters. He
+        oversaw the standardization of the Quran into a single written
+        codex, one of the most important acts in Islamic history.
+      ar: >
+        ثالث الخلفاء الراشدين، يُلقّب بـ"ذي النورين" لزواجه من
+        ابنتين للنبي. أشرف على توحيد المصحف في نسخة واحدة مكتوبة
+        وهو من أهم الأعمال في تاريخ الإسلام.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Rashidun_Caliph_Uthman_ibn_Affan_-_عثمان_بن_عفان_ثالث_الخلفاء_الراشدين.svg/330px-Rashidun_Caliph_Uthman_ibn_Affan_-_عثمان_بن_عفان_ثالث_الخلفاء_الراشدين.svg.png
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Uthman
+      ar: https://ar.wikipedia.org/wiki/عثمان_بن_عفان
+    relations:
+      - type: student_of
+        target: prophet_muhammad
+
+  - id: ali
+    name:
+      en: Ali ibn Abi Talib
+      ar: علي بن أبي طالب
+    born: 601
+    died: 661
+    categories:
+      - islam
+      - authority
+      - fiqh
+    description:
+      en: >
+        The fourth Rashidun caliph, cousin and son-in-law of Prophet
+        Muhammad. Known for his deep knowledge, bravery, and eloquence.
+        He is central to both Sunni and Shia traditions and is regarded
+        as the "Gate of Knowledge" of the Prophet.
+      ar: >
+        رابع الخلفاء الراشدين، ابن عم النبي محمد وصهره. عُرف بعلمه
+        العميق وشجاعته وبلاغته. يحتل مكانة محورية في التقليدين
+        السني والشيعي ويُلقّب بـ"باب مدينة العلم".
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Rashidun_Caliph_Ali_ibn_Abi_Talib_-_علي_بن_أبي_طالب.svg/330px-Rashidun_Caliph_Ali_ibn_Abi_Talib_-_علي_بن_أبي_طالب.svg.png
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Ali
+      ar: https://ar.wikipedia.org/wiki/علي_بن_أبي_طالب
+    relations:
+      - type: student_of
+        target: prophet_muhammad
+      - type: child_of
+        target: fatimah
+
+  - id: fatimah
+    name:
+      en: Fatimah al-Zahra
+      ar: فاطمة الزهراء
+    born: 605
+    died: 632
+    categories:
+      - islam
+    description:
+      en: >
+        Daughter of Prophet Muhammad and Khadijah, wife of Ali ibn Abi
+        Talib, and mother of al-Hasan and al-Husayn. She is one of the
+        most revered women in Islam and a key figure in the Prophet's household.
+      ar: >
+        ابنة النبي محمد وخديجة، زوجة علي بن أبي طالب وأم الحسن
+        والحسين. من أجلّ النساء في الإسلام وشخصية محورية في آل البيت.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Fatimah
+      ar: https://ar.wikipedia.org/wiki/فاطمة_الزهراء
+    relations:
+      - type: child_of
+        target: prophet_muhammad
+      - type: mother_of
+        target: ali
+
+  - id: aisha
+    name:
+      en: Aisha bint Abi Bakr
+      ar: عائشة بنت أبي بكر
+    born: 613
+    died: 678
+    categories:
+      - islam
+      - hadith
+    description:
+      en: >
+        Wife of Prophet Muhammad and daughter of Abu Bakr. One of the
+        most prolific narrators of hadith, transmitting over 2,200
+        traditions. She was a leading scholar consulted by companions
+        on matters of law, theology, and medicine.
+      ar: >
+        زوجة النبي محمد وابنة أبي بكر. من أكثر رواة الحديث غزارة
+        إذ روت أكثر من 2200 حديث. كانت عالمة بارزة يستشيرها
+        الصحابة في الفقه والعقيدة والطب.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Aisha
+      ar: https://ar.wikipedia.org/wiki/عائشة_بنت_أبي_بكر
+    relations:
+      - type: child_of
+        target: abu_bakr
+      - type: teacher_of
+        target: ibn_shihab_al_zuhri
+
+  - id: abu_hurayrah
+    name:
+      en: Abu Hurayrah
+      ar: أبو هريرة
+    born: 603
+    died: 681
+    categories:
+      - islam
+      - hadith
+    description:
+      en: >
+        The most prolific narrator of hadith among the companions of
+        Prophet Muhammad, credited with transmitting over 5,300 traditions.
+        He embraced Islam in 629 CE and devoted himself to memorizing
+        and transmitting the Prophet's sayings.
+      ar: >
+        أكثر الصحابة رواية للحديث النبوي، يُنسب إليه نقل أكثر من
+        5300 حديث. أسلم عام 629م وكرّس حياته لحفظ أحاديث النبي ونقلها.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Abu_Hurairah
+      ar: https://ar.wikipedia.org/wiki/أبو_هريرة
+    relations:
+      - type: student_of
+        target: prophet_muhammad
+      - type: teacher_of
+        target: ibn_shihab_al_zuhri
+
+  - id: ibn_abbas
+    name:
+      en: Abdullah ibn Abbas
+      ar: عبد الله بن عباس
+    born: 619
+    died: 687
+    categories:
+      - islam
+      - hadith
+      - fiqh
+    description:
+      en: >
+        Cousin of Prophet Muhammad and one of the most learned companions,
+        known as "the Ocean" for his vast knowledge. He narrated about
+        1,660 hadith and is considered the father of Quranic exegesis (tafsir).
+      ar: >
+        ابن عم النبي محمد ومن أعلم الصحابة، يُلقّب بـ"البحر" لسعة علمه.
+        روى نحو 1660 حديثاً ويُعتبر مؤسس علم التفسير القرآني.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Abdullah_ibn_Abbas
+      ar: https://ar.wikipedia.org/wiki/عبد_الله_بن_عباس
+    relations:
+      - type: student_of
+        target: prophet_muhammad
+      - type: student_of
+        target: umar
+
+  - id: ibn_umar
+    name:
+      en: Abdullah ibn Umar
+      ar: عبد الله بن عمر
+    born: 614
+    died: 693
+    categories:
+      - islam
+      - hadith
+      - fiqh
+    description:
+      en: >
+        Son of Caliph Umar and one of the most respected companions.
+        He narrated about 2,630 hadith and was known for meticulously
+        following the Prophet's Sunnah in every detail of his life.
+      ar: >
+        ابن الخليفة عمر ومن أجلّ الصحابة. روى نحو 2630 حديثاً
+        وعُرف بحرصه الشديد على اتباع سنة النبي في كل تفاصيل حياته.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Abdullah_ibn_Umar
+      ar: https://ar.wikipedia.org/wiki/عبد_الله_بن_عمر_بن_الخطاب
+    relations:
+      - type: child_of
+        target: umar
+      - type: teacher_of
+        target: ibn_shihab_al_zuhri
+
+  - id: anas_ibn_malik
+    name:
+      en: Anas ibn Malik
+      ar: أنس بن مالك
+    born: 612
+    died: 712
+    categories:
+      - islam
+      - hadith
+    description:
+      en: >
+        Personal servant of Prophet Muhammad for ten years and one of
+        the last surviving companions. He narrated over 2,200 hadith
+        and lived to be about 100 years old, becoming a vital link
+        in the chains of hadith transmission.
+      ar: >
+        خادم النبي محمد الشخصي لعشر سنوات ومن آخر الصحابة وفاة.
+        روى أكثر من 2200 حديث وعاش نحو مئة عام مما جعله حلقة
+        حيوية في سلاسل رواية الحديث.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Anas_ibn_Malik
+      ar: https://ar.wikipedia.org/wiki/أنس_بن_مالك
+    relations:
+      - type: student_of
+        target: prophet_muhammad
+      - type: teacher_of
+        target: ibn_shihab_al_zuhri
+
   # ---- The Islamic Golden Age ----
 
   - id: al_khwarizmi
