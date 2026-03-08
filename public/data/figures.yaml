@@ -176,6 +176,391 @@ figures:
       - type: influenced
         target: al_farabi
 
+  # ---- Early Hadith Scholars & Narrators ----
+
+  - id: ibn_shihab_al_zuhri
+    name:
+      en: Ibn Shihab al-Zuhri
+      ar: ابن شهاب الزهري
+    born: 678
+    died: 742
+    categories:
+      - hadith
+    description:
+      en: >
+        One of the earliest and most important hadith scholars, considered
+        a pioneer of hadith compilation. He was among the first to write
+        down hadith systematically on the order of Caliph Umar ibn Abd
+        al-Aziz. A key link in many chains of narration.
+      ar: >
+        من أوائل وأهم علماء الحديث، يُعتبر رائداً في تدوين الحديث.
+        كان من أوائل من كتبوا الحديث بشكل منهجي بأمر من الخليفة
+        عمر بن عبد العزيز. حلقة أساسية في كثير من أسانيد الرواية.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Ibn_Shihab_al-Zuhri
+      ar: https://ar.wikipedia.org/wiki/ابن_شهاب_الزهري
+    relations:
+      - type: teacher_of
+        target: malik_ibn_anas
+      - type: teacher_of
+        target: sufyan_al_thawri
+
+  - id: shubah_ibn_al_hajjaj
+    name:
+      en: Shu'bah ibn al-Hajjaj
+      ar: شعبة بن الحجاج
+    born: 702
+    died: 776
+    categories:
+      - hadith
+    description:
+      en: >
+        Known as "Amir al-Mu'minin fi al-Hadith" (Commander of the Faithful
+        in Hadith), he was one of the greatest hadith critics of the early
+        period. He pioneered the critical evaluation of hadith narrators
+        and set standards for accepting or rejecting transmissions.
+      ar: >
+        يُلقب بـ"أمير المؤمنين في الحديث"، كان من أعظم نقاد الحديث
+        في الفترة المبكرة. كان رائداً في نقد رواة الحديث ووضع
+        معايير قبول الروايات أو ردها.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Shu%27ba_ibn_al-Hajjaj
+      ar: https://ar.wikipedia.org/wiki/شعبة_بن_الحجاج
+    relations:
+      - type: teacher_of
+        target: ahmad_ibn_hanbal
+
+  - id: malik_ibn_anas
+    name:
+      en: Malik ibn Anas
+      ar: مالك بن أنس
+    born: 711
+    died: 795
+    categories:
+      - hadith
+      - fiqh
+    description:
+      en: >
+        Founder of the Maliki school of jurisprudence and author of
+        "al-Muwatta'," one of the earliest and most authentic collections
+        of hadith. He taught in Medina and is one of the most revered
+        hadith scholars in Islamic history.
+      ar: >
+        مؤسس المذهب المالكي ومؤلف "الموطأ"، أحد أقدم وأوثق
+        مجموعات الحديث. درّس في المدينة المنورة ويُعد من
+        أجلّ علماء الحديث في تاريخ الإسلام.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Medina_Masjid_Nabwi_2009.jpg/330px-Medina_Masjid_Nabwi_2009.jpg
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Malik_ibn_Anas
+      ar: https://ar.wikipedia.org/wiki/مالك_بن_أنس
+    relations:
+      - type: student_of
+        target: ibn_shihab_al_zuhri
+      - type: teacher_of
+        target: ahmad_ibn_hanbal
+
+  - id: sufyan_al_thawri
+    name:
+      en: Sufyan al-Thawri
+      ar: سفيان الثوري
+    born: 716
+    died: 778
+    categories:
+      - hadith
+      - fiqh
+    description:
+      en: >
+        One of the greatest hadith masters and jurists of the early
+        Islamic period. Known for his piety and encyclopedic knowledge
+        of hadith. He compiled "al-Jami'" and was considered one of
+        the most reliable narrators of his generation.
+      ar: >
+        من أعظم أئمة الحديث والفقه في صدر الإسلام. عُرف بتقواه
+        ومعرفته الموسوعية بالحديث. صنّف "الجامع" وكان يُعتبر
+        من أوثق رواة جيله.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Sufyan_al-Thawri
+      ar: https://ar.wikipedia.org/wiki/سفيان_الثوري
+    relations:
+      - type: student_of
+        target: ibn_shihab_al_zuhri
+      - type: colleague
+        target: malik_ibn_anas
+
+  - id: abdullah_ibn_al_mubarak
+    name:
+      en: Abdullah ibn al-Mubarak
+      ar: عبد الله بن المبارك
+    born: 736
+    died: 797
+    categories:
+      - hadith
+    description:
+      en: >
+        A distinguished hadith scholar, ascetic, and warrior from Merv.
+        Known for his "Kitab al-Zuhd" on asceticism and his vast knowledge
+        of hadith. He traveled extensively to collect hadith and was
+        renowned for his piety and generosity.
+      ar: >
+        عالم حديث بارز وزاهد ومجاهد من مرو. معروف بكتابه
+        "كتاب الزهد" ومعرفته الواسعة بالحديث. رحل كثيراً
+        لجمع الحديث واشتهر بتقواه وكرمه.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Abdullah_ibn_al-Mubarak
+      ar: https://ar.wikipedia.org/wiki/عبد_الله_بن_المبارك
+    relations:
+      - type: student_of
+        target: sufyan_al_thawri
+      - type: student_of
+        target: malik_ibn_anas
+
+  - id: yahya_ibn_main
+    name:
+      en: Yahya ibn Ma'in
+      ar: يحيى بن معين
+    born: 775
+    died: 847
+    categories:
+      - hadith
+    description:
+      en: >
+        One of the foremost authorities on hadith criticism (al-Jarh
+        wa al-Ta'dil). He dedicated his life to evaluating hadith narrators,
+        classifying them as reliable or weak. His judgments remain
+        foundational references in hadith authentication.
+      ar: >
+        أحد أبرز أئمة الجرح والتعديل. كرّس حياته لتقييم رواة الحديث
+        وتصنيفهم بين الثقة والضعيف. لا تزال أحكامه مراجع
+        أساسية في تصحيح الحديث.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Yahya_ibn_Ma%27in
+      ar: https://ar.wikipedia.org/wiki/يحيى_بن_معين
+    relations:
+      - type: colleague
+        target: ahmad_ibn_hanbal
+      - type: colleague
+        target: ali_ibn_al_madini
+      - type: teacher_of
+        target: al_bukhari
+
+  - id: ali_ibn_al_madini
+    name:
+      en: Ali ibn al-Madini
+      ar: علي بن المديني
+    born: 778
+    died: 849
+    categories:
+      - hadith
+    description:
+      en: >
+        One of the greatest hadith scholars and the foremost expert on
+        'ilal (hidden defects in hadith). Al-Bukhari called him "the most
+        knowledgeable person I have seen." His work on hadith defects
+        set the standard for critical hadith analysis.
+      ar: >
+        من أعظم علماء الحديث وأبرز خبراء العلل. قال عنه البخاري
+        "ما رأيت أحداً أعلم منه." وضعت أعماله في علل الحديث
+        المعيار للتحليل النقدي للحديث.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Ali_ibn_al-Madini
+      ar: https://ar.wikipedia.org/wiki/علي_بن_المديني
+    relations:
+      - type: colleague
+        target: ahmad_ibn_hanbal
+      - type: teacher_of
+        target: al_bukhari
+
+  - id: ahmad_ibn_hanbal
+    name:
+      en: Ahmad ibn Hanbal
+      ar: أحمد بن حنبل
+    born: 780
+    died: 855
+    categories:
+      - hadith
+      - fiqh
+    description:
+      en: >
+        Founder of the Hanbali school and compiler of the "Musnad," one
+        of the largest hadith collections containing over 27,000 narrations.
+        Famous for his steadfastness during the Mihna (Inquisition) regarding
+        the createdness of the Quran. A towering figure in hadith and fiqh.
+      ar: >
+        مؤسس المذهب الحنبلي ومصنّف "المسند"، أحد أكبر مجموعات الحديث
+        ويحتوي على أكثر من 27,000 رواية. اشتهر بثباته في فتنة
+        خلق القرآن. شخصية محورية في الحديث والفقه.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Imam_Ahmad_ibn_Hanbal_Mosque%2C_Baghdad.jpg/330px-Imam_Ahmad_ibn_Hanbal_Mosque%2C_Baghdad.jpg
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Ahmad_ibn_Hanbal
+      ar: https://ar.wikipedia.org/wiki/أحمد_بن_حنبل
+    relations:
+      - type: student_of
+        target: malik_ibn_anas
+      - type: student_of
+        target: shubah_ibn_al_hajjaj
+      - type: teacher_of
+        target: al_bukhari
+      - type: teacher_of
+        target: muslim_ibn_al_hajjaj
+      - type: teacher_of
+        target: abu_dawud
+
+  - id: al_bukhari
+    name:
+      en: Imam al-Bukhari
+      ar: الإمام البخاري
+    born: 810
+    died: 870
+    categories:
+      - hadith
+    description:
+      en: >
+        Compiler of "Sahih al-Bukhari," universally regarded as the most
+        authentic book of hadith. He spent 16 years compiling it, selecting
+        approximately 7,275 hadith from over 600,000 narrations. His
+        rigorous methodology set the gold standard for hadith authentication.
+      ar: >
+        مصنّف "صحيح البخاري"، المُعتبر بالإجماع أصح كتب الحديث.
+        أمضى 16 عاماً في تصنيفه، منتقياً نحو 7,275 حديثاً
+        من أكثر من 600,000 رواية. وضع منهجه الصارم المعيار
+        الذهبي لتصحيح الحديث.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Imam_al-Bukhari%27s_shrine_in_Samarkand%2C_Uzbekistan.jpg/330px-Imam_al-Bukhari%27s_shrine_in_Samarkand%2C_Uzbekistan.jpg
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Muhammad_al-Bukhari
+      ar: https://ar.wikipedia.org/wiki/محمد_بن_إسماعيل_البخاري
+    relations:
+      - type: student_of
+        target: ahmad_ibn_hanbal
+      - type: student_of
+        target: ali_ibn_al_madini
+      - type: student_of
+        target: yahya_ibn_main
+      - type: teacher_of
+        target: muslim_ibn_al_hajjaj
+      - type: teacher_of
+        target: al_tirmidhi
+
+  - id: muslim_ibn_al_hajjaj
+    name:
+      en: Imam Muslim
+      ar: الإمام مسلم
+    born: 821
+    died: 875
+    categories:
+      - hadith
+    description:
+      en: >
+        Author of "Sahih Muslim," the second most authentic hadith collection
+        after Sahih al-Bukhari. Known for his meticulous arrangement and
+        methodology, he compiled approximately 7,500 hadith. Together with
+        al-Bukhari, they form the "Two Sahihs" (al-Sahihayn).
+      ar: >
+        مؤلف "صحيح مسلم"، ثاني أصح كتب الحديث بعد صحيح البخاري.
+        عُرف بترتيبه الدقيق ومنهجيته، وجمع نحو 7,500 حديث.
+        يشكّل مع البخاري "الصحيحين".
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Muslim_ibn_al-Hajjaj
+      ar: https://ar.wikipedia.org/wiki/مسلم_بن_الحجاج
+    relations:
+      - type: student_of
+        target: ahmad_ibn_hanbal
+      - type: student_of
+        target: al_bukhari
+
+  - id: abu_dawud
+    name:
+      en: Abu Dawud al-Sijistani
+      ar: أبو داود السجستاني
+    born: 817
+    died: 889
+    categories:
+      - hadith
+    description:
+      en: >
+        Compiler of "Sunan Abi Dawud," one of the six canonical hadith
+        collections (Kutub al-Sittah). His collection focuses on hadith
+        relevant to Islamic jurisprudence and legal rulings. He selected
+        4,800 hadith from 500,000 narrations.
+      ar: >
+        مصنّف "سنن أبي داود"، أحد الكتب الستة في الحديث.
+        تركّز مجموعته على الأحاديث المتعلقة بالفقه والأحكام الشرعية.
+        انتقى 4,800 حديث من 500,000 رواية.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Abu_Dawud_al-Sijistani
+      ar: https://ar.wikipedia.org/wiki/أبو_داود_السجستاني
+    relations:
+      - type: student_of
+        target: ahmad_ibn_hanbal
+
+  - id: al_tirmidhi
+    name:
+      en: Al-Tirmidhi
+      ar: الترمذي
+    born: 824
+    died: 892
+    categories:
+      - hadith
+    description:
+      en: >
+        Author of "Jami' al-Tirmidhi" (also called "Sunan al-Tirmidhi"),
+        one of the six canonical hadith collections. Uniquely, he graded
+        each hadith and noted the opinions of various jurists, making his
+        work invaluable for comparative fiqh.
+      ar: >
+        مؤلف "جامع الترمذي" (المعروف أيضاً بـ"سنن الترمذي")،
+        أحد الكتب الستة. تميّز بتصنيف كل حديث وذكر آراء الفقهاء
+        المختلفين، مما جعل عمله لا يُقدّر بثمن للفقه المقارن.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Al-Tirmidhi
+      ar: https://ar.wikipedia.org/wiki/الترمذي
+    relations:
+      - type: student_of
+        target: al_bukhari
+
+  - id: ibn_majah
+    name:
+      en: Ibn Majah
+      ar: ابن ماجه
+    born: 824
+    died: 887
+    categories:
+      - hadith
+    description:
+      en: >
+        Compiler of "Sunan Ibn Majah," the sixth of the canonical hadith
+        collections. His collection contains hadith not found in the other
+        five canonical works, making it an essential supplement for hadith
+        scholarship.
+      ar: >
+        مصنّف "سنن ابن ماجه"، سادس الكتب الستة في الحديث.
+        تحتوي مجموعته على أحاديث لا توجد في الكتب الخمسة
+        الأخرى، مما يجعلها مكملاً ضرورياً لعلم الحديث.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Ibn_Majah
+      ar: https://ar.wikipedia.org/wiki/ابن_ماجه
+
+  - id: al_nasai
+    name:
+      en: Al-Nasa'i
+      ar: النسائي
+    born: 829
+    died: 915
+    categories:
+      - hadith
+    description:
+      en: >
+        Author of "Sunan al-Nasa'i," one of the six canonical hadith
+        collections, considered the most strict in narrator criteria after
+        the Two Sahihs. He was renowned for his expertise in evaluating
+        narrators and detecting hidden defects in hadith chains.
+      ar: >
+        مؤلف "سنن النسائي"، أحد الكتب الستة في الحديث، يُعتبر
+        الأشد صرامة في شروط الرواة بعد الصحيحين. اشتهر بخبرته
+        في تقييم الرواة وكشف العلل الخفية في الأسانيد.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Al-Nasa%27i
+      ar: https://ar.wikipedia.org/wiki/النسائي
+
   - id: al_tabari
     name:
       en: Al-Tabari
@@ -198,6 +583,99 @@ figures:
     wikipedia:
       en: https://en.wikipedia.org/wiki/Al-Tabari
       ar: https://ar.wikipedia.org/wiki/الطبري
+
+  - id: al_daraqutni
+    name:
+      en: Al-Daraqutni
+      ar: الدارقطني
+    born: 918
+    died: 995
+    categories:
+      - hadith
+    description:
+      en: >
+        One of the greatest hadith critics, author of "Sunan al-Daraqutni"
+        and the monumental "Kitab al-'Ilal" on hadith defects. His expertise
+        in identifying subtle flaws in narration chains was unmatched
+        in his era.
+      ar: >
+        من أعظم نقاد الحديث، مؤلف "سنن الدارقطني" و"كتاب العلل"
+        في علل الحديث. كانت خبرته في كشف العلل الدقيقة في
+        أسانيد الرواية لا نظير لها في عصره.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Al-Daraqutni
+      ar: https://ar.wikipedia.org/wiki/الدارقطني
+
+  - id: al_nawawi
+    name:
+      en: Imam al-Nawawi
+      ar: الإمام النووي
+    born: 1233
+    died: 1277
+    categories:
+      - hadith
+      - fiqh
+    description:
+      en: >
+        One of the most influential hadith scholars and jurists. Author
+        of "Riyadh al-Salihin," "al-Adhkar," and the famous "Forty Hadith."
+        His commentary on Sahih Muslim remains the standard reference.
+        Despite dying at age 44, his scholarly output was extraordinary.
+      ar: >
+        من أكثر علماء الحديث والفقه تأثيراً. مؤلف "رياض الصالحين"
+        و"الأذكار" و"الأربعين النووية" الشهيرة. لا يزال شرحه
+        لصحيح مسلم المرجع الأساسي. رغم وفاته في الرابعة والأربعين
+        كان إنتاجه العلمي استثنائياً.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Al-Nawawi%27s_shrine_in_Nawa%2C_Syria.jpg/330px-Al-Nawawi%27s_shrine_in_Nawa%2C_Syria.jpg
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Al-Nawawi
+      ar: https://ar.wikipedia.org/wiki/النووي
+
+  - id: al_dhahabi
+    name:
+      en: Al-Dhahabi
+      ar: الذهبي
+    born: 1274
+    died: 1348
+    categories:
+      - hadith
+    description:
+      en: >
+        Prolific hadith scholar and historian, author of "Siyar A'lam
+        al-Nubala'" (biographies of noble figures), "Mizan al-I'tidal"
+        (on narrator criticism), and "Tadhkirat al-Huffaz." His biographical
+        works are indispensable references for hadith scholarship.
+      ar: >
+        عالم حديث ومؤرخ غزير الإنتاج، مؤلف "سير أعلام النبلاء"
+        و"ميزان الاعتدال" في نقد الرواة و"تذكرة الحفاظ."
+        تُعد أعماله البيوغرافية مراجع لا غنى عنها في علم الحديث.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Al-Dhahabi
+      ar: https://ar.wikipedia.org/wiki/الذهبي
+
+  - id: ibn_hajar_al_asqalani
+    name:
+      en: Ibn Hajar al-Asqalani
+      ar: ابن حجر العسقلاني
+    born: 1372
+    died: 1449
+    categories:
+      - hadith
+    description:
+      en: >
+        The foremost commentator on Sahih al-Bukhari, his "Fath al-Bari"
+        is considered the greatest hadith commentary ever written. He also
+        authored "Nuzhat al-Nazar" on hadith methodology and "Tahdhib
+        al-Tahdhib" on narrator evaluation. Known as "Amir al-Mu'minin
+        fi al-Hadith" of his era.
+      ar: >
+        أعظم شارح لصحيح البخاري، يُعتبر كتابه "فتح الباري" أجلّ
+        شرح للحديث على الإطلاق. ألّف أيضاً "نزهة النظر" في
+        مصطلح الحديث و"تهذيب التهذيب" في تقييم الرواة.
+        يُلقب بـ"أمير المؤمنين في الحديث" في عصره.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Ibn_Hajar_al-Asqalani
+      ar: https://ar.wikipedia.org/wiki/ابن_حجر_العسقلاني
 
   - id: al_farabi
     name:
