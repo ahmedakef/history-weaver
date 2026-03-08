@@ -34,6 +34,12 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
     categoryDefs.forEach((c) => m.set(c.id, resolveTranslation(c.name, lang)));
     return m;
   }, [categoryDefs, lang]);
+
+  const relTypeNameMap = useMemo(() => {
+    const m = new Map<string, string>();
+    relationTypeDefs.forEach((r) => m.set(r.id, resolveTranslation(r.name, lang)));
+    return m;
+  }, [relationTypeDefs, lang]);
   const [selected, setSelected] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const figureRefs = useRef<Record<string, HTMLDivElement | null>>({});
