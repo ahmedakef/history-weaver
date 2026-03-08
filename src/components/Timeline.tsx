@@ -1,4 +1,4 @@
-import type { Figure, Category, CategoryDef } from "@/types/figures";
+import type { Figure, Category, CategoryDef, RelationTypeDef } from "@/types/figures";
 import { resolveTranslation } from "@/types/figures";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useMemo, useRef, useCallback, useEffect } from "react";
