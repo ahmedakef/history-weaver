@@ -1,0 +1,16 @@
+# Example list of Wikipedia URLs to scrape
+# One URL per line. Lines starting with # are ignored.
+#
+# Usage: python scripts/scrape_wikipedia.py --file scripts/urls.txt
+#
+
+https://en.wikipedia.org/wiki/Ibn_Khaldun
+https://en.wikipedia.org/wiki/Al-Biruni
+https://en.wikipedia.org/wiki/Averroes
+https://en.wikipedia.org/wiki/Avicenna
+https://en.wikipedia.org/wiki/Al-Kindi
+https://en.wikipedia.org/wiki/Al-Farabi
+https://en.wikipedia.org/wiki/Al-Ghazali
+https://en.wikipedia.org/wiki/Ibn_Rushd
+https://en.wikipedia.org/wiki/Al-Khwarizmi
+https://en.wikipedia.org/wiki/Ibn_al-Haytham
