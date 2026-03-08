@@ -1,0 +1,148 @@
+# =============================================================
+# Historical Figures Database
+# =============================================================
+# HOW TO ADD A NEW PERSON:
+#
+# Copy the template below and fill in the details:
+#
+#   - id: unique_id          # A short unique name (no spaces, use underscores)
+#     name: Full Name
+#     born: 1000              # Year of birth
+#     died: 1100              # Year of death
+#     categories:             # One or more of: science, religion, authority, philosophy
+#       - science
+#     description: A short bio of the person
+#     relations:              # Optional: connections to other people
+#       - type: father_of     # Options: father_of, mother_of, child_of, teacher_of, student_of, influenced, colleague
+#         target: other_id    # The id of the related person
+#
+# =============================================================
+
+figures:
+
+  # ---- The Islamic Golden Age ----
+
+  - id: ahmed_ibn_ali
+    name: Ahmed ibn Ali
+    born: 1000
+    died: 1100
+    categories:
+      - science
+      - religion
+    description: >
+      A renowned scholar of mathematics and theology in Baghdad.
+      Known for his contributions to algebra and Quranic studies.
+    relations:
+      - type: father_of
+        target: mohamed_ibn_ahmed
+
+  - id: mohamed_ibn_ahmed
+    name: Mohamed ibn Ahmed
+    born: 1050
+    died: 1120
+    categories:
+      - science
+    description: >
+      Son of Ahmed ibn Ali. Continued his father's work in mathematics
+      and made advances in optics and astronomy.
+    relations:
+      - type: child_of
+        target: ahmed_ibn_ali
+      - type: student_of
+        target: ibn_al_haytham
+
+  - id: ibn_al_haytham
+    name: Ibn al-Haytham (Alhazen)
+    born: 965
+    died: 1040
+    categories:
+      - science
+    description: >
+      The father of modern optics. His Book of Optics fundamentally
+      changed the understanding of light and vision.
+    relations:
+      - type: teacher_of
+        target: mohamed_ibn_ahmed
+
+  - id: al_ghazali
+    name: Abu Hamid al-Ghazali
+    born: 1058
+    died: 1111
+    categories:
+      - religion
+      - philosophy
+    description: >
+      One of the most influential Muslim theologians and philosophers.
+      His work "The Incoherence of the Philosophers" reshaped Islamic thought.
+
+  - id: saladin
+    name: Salah ad-Din (Saladin)
+    born: 1137
+    died: 1193
+    categories:
+      - authority
+    description: >
+      The first sultan of Egypt and Syria, founder of the Ayyubid dynasty.
+      Known for recapturing Jerusalem during the Crusades.
+
+  - id: ibn_rushd
+    name: Ibn Rushd (Averroes)
+    born: 1126
+    died: 1198
+    categories:
+      - philosophy
+      - science
+    description: >
+      Andalusian philosopher and polymath. His commentaries on Aristotle
+      profoundly influenced both Islamic and European thought.
+    relations:
+      - type: influenced
+        target: al_ghazali
+
+  - id: ibn_sina
+    name: Ibn Sina (Avicenna)
+    born: 980
+    died: 1037
+    categories:
+      - science
+      - philosophy
+    description: >
+      Persian polymath regarded as the father of early modern medicine.
+      His Canon of Medicine was a standard medical text for centuries.
+
+  - id: nizam_al_mulk
+    name: Nizam al-Mulk
+    born: 1018
+    died: 1092
+    categories:
+      - authority
+    description: >
+      Persian scholar and vizier of the Seljuk Empire. Founded the
+      Nizamiyyah network of madrasas, some of the first universities.
+    relations:
+      - type: influenced
+        target: al_ghazali
+
+  - id: omar_khayyam
+    name: Omar Khayyam
+    born: 1048
+    died: 1131
+    categories:
+      - science
+      - philosophy
+    description: >
+      Persian mathematician, astronomer, and poet. Known for his work
+      on cubic equations and the famous Rubaiyat poetry collection.
+
+  - id: al_biruni
+    name: Abu Rayhan al-Biruni
+    born: 973
+    died: 1048
+    categories:
+      - science
+    description: >
+      A polymath who excelled in mathematics, astronomy, and natural sciences.
+      Accurately calculated the Earth's circumference.
+    relations:
+      - type: colleague
+        target: ibn_sina

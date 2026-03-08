@@ -13,7 +13,15 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ['Playfair Display', 'serif'],
+        body: ['Source Sans 3', 'sans-serif'],
+      },
       colors: {
+        science: "hsl(var(--cat-science))",
+        religion: "hsl(var(--cat-religion))",
+        authority: "hsl(var(--cat-authority))",
+        philosophy: "hsl(var(--cat-philosophy))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
