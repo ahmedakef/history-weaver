@@ -83,7 +83,7 @@ const Index = () => {
             className="overflow-x-auto pb-4"
           >
             <div className="min-w-[800px]">
-              <Timeline figures={filtered} allFigures={allFigures} categoryDefs={categoryDefs} />
+              <Timeline figures={filtered} allFigures={allFigures} categoryDefs={categoryDefs} relationTypeDefs={relationTypeDefs} />
             </div>
           </motion.div>
         )}
