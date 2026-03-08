@@ -94,14 +94,15 @@ relation_types:
 #     name:                   # Name supports multiple languages:
 #       en: Full Name         #   English name
 #       ar: الاسم الكامل       #   Arabic name (optional)
-#     born: 1000              # Year of birth (Gregorian)
-#     died: 1100              # Year of death (Gregorian)
+#     born: 1000              # Year of birth (Gregorian, negative for BC)
+#     died: 1100              # Year of death (Gregorian, negative for BC)
 #     categories:             # One or more category ids (can be root or subcategories)
 #       - mathematics         # Example subcategory
 #       - philosophy          # Can add multiple
 #     description:            # Description supports multiple languages:
 #       en: A short bio in English
 #       ar: نبذة مختصرة بالعربية  # (optional)
+#     image: https://upload.wikimedia.org/...  # Optional: URL to a portrait/photo
 #     wikipedia:              # Optional: Wikipedia links by language
 #       en: https://en.wikipedia.org/wiki/Full_Name
 #       ar: https://ar.wikipedia.org/wiki/الاسم_الكامل  # (optional; if missing, English link is used as fallback)
