@@ -6,15 +6,23 @@
 # Copy the template below and fill in the details:
 #
 #   - id: unique_id          # A short unique name (no spaces, use underscores)
-#     name: Full Name
-#     born: 1000              # Year of birth
-#     died: 1100              # Year of death
+#     name:                   # Name supports multiple languages:
+#       en: Full Name         #   English name
+#       ar: الاسم الكامل       #   Arabic name (optional)
+#     born: 1000              # Year of birth (Gregorian)
+#     died: 1100              # Year of death (Gregorian)
 #     categories:             # One or more of: science, religion, authority, philosophy
 #       - science
-#     description: A short bio of the person
+#     description:            # Description supports multiple languages:
+#       en: A short bio in English
+#       ar: نبذة مختصرة بالعربية  # (optional)
 #     relations:              # Optional: connections to other people
 #       - type: father_of     # Options: father_of, mother_of, child_of, teacher_of, student_of, influenced, colleague
 #         target: other_id    # The id of the related person
+#
+# NOTE: For name and description, you can also use a plain string
+#       if you only need one language:
+#         name: Ahmed ibn Ali
 #
 # =============================================================
 
@@ -23,28 +31,40 @@ figures:
   # ---- The Islamic Golden Age ----
 
   - id: ahmed_ibn_ali
-    name: Ahmed ibn Ali
+    name:
+      en: Ahmed ibn Ali
+      ar: أحمد بن علي
     born: 1000
     died: 1100
     categories:
       - science
       - religion
-    description: >
-      A renowned scholar of mathematics and theology in Baghdad.
-      Known for his contributions to algebra and Quranic studies.
+    description:
+      en: >
+        A renowned scholar of mathematics and theology in Baghdad.
+        Known for his contributions to algebra and Quranic studies.
+      ar: >
+        عالم مشهور في الرياضيات واللاهوت في بغداد.
+        معروف بإسهاماته في الجبر والدراسات القرآنية.
     relations:
       - type: father_of
         target: mohamed_ibn_ahmed
 
   - id: mohamed_ibn_ahmed
-    name: Mohamed ibn Ahmed
+    name:
+      en: Mohamed ibn Ahmed
+      ar: محمد بن أحمد
     born: 1050
     died: 1120
     categories:
       - science
-    description: >
-      Son of Ahmed ibn Ali. Continued his father's work in mathematics
-      and made advances in optics and astronomy.
+    description:
+      en: >
+        Son of Ahmed ibn Ali. Continued his father's work in mathematics
+        and made advances in optics and astronomy.
+      ar: >
+        ابن أحمد بن علي. تابع عمل والده في الرياضيات
+        وحقق تقدمًا في البصريات وعلم الفلك.
     relations:
       - type: child_of
         target: ahmed_ibn_ali
@@ -52,97 +72,145 @@ figures:
         target: ibn_al_haytham
 
   - id: ibn_al_haytham
-    name: Ibn al-Haytham (Alhazen)
+    name:
+      en: Ibn al-Haytham (Alhazen)
+      ar: ابن الهيثم
     born: 965
     died: 1040
     categories:
       - science
-    description: >
-      The father of modern optics. His Book of Optics fundamentally
-      changed the understanding of light and vision.
+    description:
+      en: >
+        The father of modern optics. His Book of Optics fundamentally
+        changed the understanding of light and vision.
+      ar: >
+        أبو البصريات الحديثة. كتابه "المناظر" غيّر بشكل جذري
+        فهم الضوء والرؤية.
     relations:
       - type: teacher_of
         target: mohamed_ibn_ahmed
 
   - id: al_ghazali
-    name: Abu Hamid al-Ghazali
+    name:
+      en: Abu Hamid al-Ghazali
+      ar: أبو حامد الغزالي
     born: 1058
     died: 1111
     categories:
       - religion
       - philosophy
-    description: >
-      One of the most influential Muslim theologians and philosophers.
-      His work "The Incoherence of the Philosophers" reshaped Islamic thought.
+    description:
+      en: >
+        One of the most influential Muslim theologians and philosophers.
+        His work "The Incoherence of the Philosophers" reshaped Islamic thought.
+      ar: >
+        أحد أكثر علماء المسلمين تأثيرًا في اللاهوت والفلسفة.
+        أعاد كتابه "تهافت الفلاسفة" تشكيل الفكر الإسلامي.
 
   - id: saladin
-    name: Salah ad-Din (Saladin)
+    name:
+      en: Salah ad-Din (Saladin)
+      ar: صلاح الدين الأيوبي
     born: 1137
     died: 1193
     categories:
       - authority
-    description: >
-      The first sultan of Egypt and Syria, founder of the Ayyubid dynasty.
-      Known for recapturing Jerusalem during the Crusades.
+    description:
+      en: >
+        The first sultan of Egypt and Syria, founder of the Ayyubid dynasty.
+        Known for recapturing Jerusalem during the Crusades.
+      ar: >
+        أول سلطان لمصر والشام، مؤسس الدولة الأيوبية.
+        معروف باستعادة القدس خلال الحروب الصليبية.
 
   - id: ibn_rushd
-    name: Ibn Rushd (Averroes)
+    name:
+      en: Ibn Rushd (Averroes)
+      ar: ابن رشد
     born: 1126
     died: 1198
     categories:
       - philosophy
       - science
-    description: >
-      Andalusian philosopher and polymath. His commentaries on Aristotle
-      profoundly influenced both Islamic and European thought.
+    description:
+      en: >
+        Andalusian philosopher and polymath. His commentaries on Aristotle
+        profoundly influenced both Islamic and European thought.
+      ar: >
+        فيلسوف وعالم موسوعي أندلسي. أثرت شروحاته على أرسطو
+        تأثيرًا عميقًا في الفكر الإسلامي والأوروبي.
     relations:
       - type: influenced
         target: al_ghazali
 
   - id: ibn_sina
-    name: Ibn Sina (Avicenna)
+    name:
+      en: Ibn Sina (Avicenna)
+      ar: ابن سينا
     born: 980
     died: 1037
     categories:
       - science
       - philosophy
-    description: >
-      Persian polymath regarded as the father of early modern medicine.
-      His Canon of Medicine was a standard medical text for centuries.
+    description:
+      en: >
+        Persian polymath regarded as the father of early modern medicine.
+        His Canon of Medicine was a standard medical text for centuries.
+      ar: >
+        عالم موسوعي فارسي يُعتبر أبا الطب الحديث المبكر.
+        كان كتابه "القانون في الطب" مرجعًا طبيًا لقرون.
 
   - id: nizam_al_mulk
-    name: Nizam al-Mulk
+    name:
+      en: Nizam al-Mulk
+      ar: نظام الملك
     born: 1018
     died: 1092
     categories:
       - authority
-    description: >
-      Persian scholar and vizier of the Seljuk Empire. Founded the
-      Nizamiyyah network of madrasas, some of the first universities.
+    description:
+      en: >
+        Persian scholar and vizier of the Seljuk Empire. Founded the
+        Nizamiyyah network of madrasas, some of the first universities.
+      ar: >
+        عالم ووزير فارسي في الدولة السلجوقية. أسس شبكة
+        المدارس النظامية، من أوائل الجامعات في التاريخ.
     relations:
       - type: influenced
         target: al_ghazali
 
   - id: omar_khayyam
-    name: Omar Khayyam
+    name:
+      en: Omar Khayyam
+      ar: عمر الخيام
     born: 1048
     died: 1131
     categories:
       - science
       - philosophy
-    description: >
-      Persian mathematician, astronomer, and poet. Known for his work
-      on cubic equations and the famous Rubaiyat poetry collection.
+    description:
+      en: >
+        Persian mathematician, astronomer, and poet. Known for his work
+        on cubic equations and the famous Rubaiyat poetry collection.
+      ar: >
+        عالم رياضيات وفلكي وشاعر فارسي. معروف بأعماله في
+        المعادلات التكعيبية ومجموعة الرباعيات الشهيرة.
 
   - id: al_biruni
-    name: Abu Rayhan al-Biruni
+    name:
+      en: Abu Rayhan al-Biruni
+      ar: أبو الريحان البيروني
     born: 973
     died: 1048
     categories:
       - science
-    description: >
-      A polymath who excelled in mathematics, astronomy, and natural sciences.
-      Accurately calculated the Earth's circumference.
+    description:
+      en: >
+        A polymath who excelled in mathematics, astronomy, and natural sciences.
+        Accurately calculated the Earth's circumference.
+      ar: >
+        عالم موسوعي برع في الرياضيات والفلك والعلوم الطبيعية.
+        حسب محيط الأرض بدقة.
     relations:
       - type: colleague
         target: ibn_sina

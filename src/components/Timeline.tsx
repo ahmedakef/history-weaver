@@ -1,6 +1,9 @@
 import type { Figure, Category } from "@/types/figures";
+import { resolveTranslation } from "@/types/figures";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useMemo, useRef, useCallback, useEffect } from "react";
+import { useI18n } from "@/lib/i18n";
+import { formatRange, formatYear, gregorianToHijri } from "@/lib/hijri";
 
 const CAT_COLORS: Record<Category, string> = {
   science: "bg-science",
@@ -16,22 +19,13 @@ const CAT_BORDER_COLORS: Record<Category, string> = {
   philosophy: "border-philosophy",
 };
 
-const RELATION_LABELS: Record<string, string> = {
-  father_of: "Father of",
-  mother_of: "Mother of",
-  child_of: "Child of",
-  teacher_of: "Teacher of",
-  student_of: "Student of",
-  influenced: "Influenced",
-  colleague: "Colleague of",
-};
-
 interface Props {
   figures: Figure[];
   allFigures: Figure[];
 }
 
 export default function Timeline({ figures, allFigures }: Props) {
+  const { lang, calendar, t } = useI18n();
   const [selected, setSelected] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const figureRefs = useRef<Record<string, HTMLDivElement | null>>({});
@@ -66,13 +60,11 @@ export default function Timeline({ figures, allFigures }: Props) {
 
   const getLeft = (year: number) => ((year - minYear) / span) * 100;
 
-  // Sort figures by born year
   const sorted = useMemo(
     () => [...figures].sort((a, b) => a.born - b.born),
     [figures]
   );
 
-  // Assign rows to avoid overlap
   const rows = useMemo(() => {
     const ends: number[] = [];
     return sorted.map((f) => {
@@ -89,7 +81,6 @@ export default function Timeline({ figures, allFigures }: Props) {
 
   const selectedFigure = selected ? figureMap.get(selected) : null;
 
-  // Compute relation lines
   const computeLines = useCallback(() => {
     if (!selected || !containerRef.current) {
       setLines([]);
@@ -117,12 +108,12 @@ export default function Timeline({ figures, allFigures }: Props) {
         y1: srcRect.top + srcRect.height / 2 - containerRect.top,
         x2: tgtRect.left + tgtRect.width / 2 - containerRect.left,
         y2: tgtRect.top + tgtRect.height / 2 - containerRect.top,
-        label: RELATION_LABELS[rel.type] || rel.type,
+        label: t(rel.type) || rel.type,
       });
     }
 
     setLines(newLines);
-  }, [selected, figureMap]);
+  }, [selected, figureMap, t]);
 
   useEffect(() => {
     computeLines();
@@ -135,12 +126,17 @@ export default function Timeline({ figures, allFigures }: Props) {
     return new Set(selectedFigure.relations.map((r) => r.target));
   }, [selectedFigure]);
 
+  const formatTickYear = (year: number) => {
+    if (calendar === "hijri") return `${gregorianToHijri(year)}`;
+    return `${year}`;
+  };
+
   return (
     <div className="relative" ref={containerRef}>
       {/* SVG overlay for relation lines */}
       <svg className="absolute inset-0 w-full h-full pointer-events-none z-10">
         <AnimatePresence>
-          {lines.map((line, i) => (
+          {lines.map((line) => (
             <motion.line
               key={`${line.x1}-${line.y1}-${line.x2}-${line.y2}`}
               x1={line.x1}
@@ -168,7 +164,7 @@ export default function Timeline({ figures, allFigures }: Props) {
             style={{ left: `${getLeft(year)}%` }}
           >
             <span className="text-xs text-muted-foreground font-body">
-              {year}
+              {formatTickYear(year)}
             </span>
             <div className="w-px h-3 bg-border mt-1" />
           </div>
@@ -228,11 +224,11 @@ export default function Timeline({ figures, allFigures }: Props) {
                     ))}
                   </div>
                   <span className="text-sm font-semibold truncate">
-                    {figure.name}
+                    {resolveTranslation(figure.name, lang)}
                   </span>
                 </div>
                 <div className="text-xs text-muted-foreground">
-                  {figure.born} – {figure.died}
+                  {formatRange(figure.born, figure.died, calendar)}
                 </div>
               </motion.div>
             );
@@ -252,10 +248,10 @@ export default function Timeline({ figures, allFigures }: Props) {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <h2 className="text-2xl font-display font-bold">
-                  {selectedFigure.name}
+                  {resolveTranslation(selectedFigure.name, lang)}
                 </h2>
                 <p className="text-sm text-muted-foreground mt-1">
-                  {selectedFigure.born} – {selectedFigure.died}
+                  {formatRange(selectedFigure.born, selectedFigure.died, calendar)}
                 </p>
                 <div className="flex gap-2 mt-2">
                   {selectedFigure.categories.map((cat) => (
@@ -263,7 +259,7 @@ export default function Timeline({ figures, allFigures }: Props) {
                       key={cat}
                       className={`${CAT_COLORS[cat]} text-primary-foreground text-xs px-2.5 py-0.5 rounded-full font-medium capitalize`}
                     >
-                      {cat}
+                      {t(cat)}
                     </span>
                   ))}
                 </div>
@@ -276,12 +272,12 @@ export default function Timeline({ figures, allFigures }: Props) {
               </button>
             </div>
             <p className="mt-4 text-foreground/80 leading-relaxed font-body">
-              {selectedFigure.description}
+              {resolveTranslation(selectedFigure.description, lang)}
             </p>
             {selectedFigure.relations && selectedFigure.relations.length > 0 && (
               <div className="mt-4 pt-4 border-t">
                 <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">
-                  Relations
+                  {t("relations")}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {selectedFigure.relations.map((rel) => {
@@ -293,10 +289,10 @@ export default function Timeline({ figures, allFigures }: Props) {
                         className="text-sm bg-secondary hover:bg-secondary/80 rounded-lg px-3 py-1.5 transition-colors"
                       >
                         <span className="text-muted-foreground">
-                          {RELATION_LABELS[rel.type] || rel.type}
+                          {t(rel.type)}
                         </span>{" "}
                         <span className="font-medium">
-                          {target?.name || rel.target}
+                          {target ? resolveTranslation(target.name, lang) : rel.target}
                         </span>
                       </button>
                     );
