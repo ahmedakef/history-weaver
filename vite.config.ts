@@ -5,6 +5,10 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // For GitHub Pages: set base to "/<repo-name>/" in production
+  // e.g. base: "/history-weaver/"
+  // Leave as "/" for custom domains or local dev
+  base: "/",
   server: {
     host: "::",
     port: 8080,
