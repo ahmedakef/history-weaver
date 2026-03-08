@@ -234,7 +234,7 @@ export default function Timeline({ figures, allFigures, categoryDefs }: Props) {
                   </span>
                 </div>
                 <div className="text-xs text-muted-foreground">
-                  {formatRange(figure.born, figure.died, calendar)}
+                  {formatRange(figure.born, figure.died, calendar, lang)}
                 </div>
               </motion.div>
             );
