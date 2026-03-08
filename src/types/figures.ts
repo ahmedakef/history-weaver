@@ -14,16 +14,25 @@ export interface Relation {
   target: string;
 }
 
+/** Supports either a plain string or a map of language codes to strings */
+export type Translatable = string | Record<string, string>;
+
 export interface Figure {
   id: string;
-  name: string;
+  name: Translatable;
   born: number;
   died: number;
   categories: Category[];
-  description: string;
+  description: Translatable;
   relations?: Relation[];
 }
 
 export interface FiguresData {
   figures: Figure[];
+}
+
+/** Resolve a Translatable field to a string for the given language */
+export function resolveTranslation(value: Translatable, lang: string): string {
+  if (typeof value === "string") return value;
+  return value[lang] || value["en"] || Object.values(value)[0] || "";
 }

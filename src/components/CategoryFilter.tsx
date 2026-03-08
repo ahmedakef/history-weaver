@@ -1,11 +1,12 @@
 import type { Category } from "@/types/figures";
 import { motion } from "framer-motion";
+import { useI18n } from "@/lib/i18n";
 
-const CATEGORIES: { key: Category; label: string; colorClass: string }[] = [
-  { key: "science", label: "Science", colorClass: "bg-science" },
-  { key: "religion", label: "Religion", colorClass: "bg-religion" },
-  { key: "authority", label: "Authority", colorClass: "bg-authority" },
-  { key: "philosophy", label: "Philosophy", colorClass: "bg-philosophy" },
+const CATEGORIES: { key: Category; colorClass: string }[] = [
+  { key: "science", colorClass: "bg-science" },
+  { key: "religion", colorClass: "bg-religion" },
+  { key: "authority", colorClass: "bg-authority" },
+  { key: "philosophy", colorClass: "bg-philosophy" },
 ];
 
 interface Props {
@@ -14,6 +15,8 @@ interface Props {
 }
 
 export default function CategoryFilter({ active, onToggle }: Props) {
+  const { t } = useI18n();
+
   return (
     <div className="flex flex-wrap gap-3">
       {CATEGORIES.map((cat) => {
@@ -39,7 +42,7 @@ export default function CategoryFilter({ active, onToggle }: Props) {
                 isActive ? "opacity-70" : ""
               }`}
             />
-            {cat.label}
+            {t(cat.key)}
           </motion.button>
         );
       })}
@@ -48,7 +51,7 @@ export default function CategoryFilter({ active, onToggle }: Props) {
           onClick={() => active.forEach(onToggle)}
           className="rounded-full px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
-          Clear all
+          {t("clear_all")}
         </button>
       )}
     </div>
