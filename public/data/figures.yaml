@@ -26,6 +26,18 @@ categories:
         name:
           en: Astronomy
           ar: فلك
+      - id: physics
+        name:
+          en: Physics
+          ar: فيزياء
+      - id: computer_science
+        name:
+          en: Computer Science
+          ar: علوم حاسوب
+      - id: poetry
+        name:
+          en: Poetry
+          ar: شعر
   - id: religion
     name:
       en: Religion
@@ -1366,3 +1378,282 @@ figures:
     relations:
       - type: influenced
         target: newton
+
+  # ---- Modern Physics & Computer Science ----
+
+  - id: alan_turing
+    name:
+      en: Alan Turing
+      ar: آلان تورنغ
+    born: 1912
+    died: 1954
+    categories:
+      - mathematics
+      - computer_science
+    description:
+      en: >
+        British mathematician and logician, widely considered the father
+        of theoretical computer science and artificial intelligence. He
+        formalized the concept of computation with the Turing machine
+        and played a pivotal role in breaking the Enigma code during WWII.
+      ar: >
+        عالم رياضيات ومنطق بريطاني يُعتبر على نطاق واسع أب علوم
+        الحاسوب النظرية والذكاء الاصطناعي. صاغ مفهوم الحوسبة بآلة
+        تورنغ ولعب دوراً محورياً في فك شفرة إنيغما في الحرب العالمية الثانية.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Alan_Turing_Aged_16.jpg/330px-Alan_Turing_Aged_16.jpg
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Alan_Turing
+      ar: https://ar.wikipedia.org/wiki/آلان_تورنغ
+
+  - id: john_von_neumann
+    name:
+      en: John von Neumann
+      ar: جون فون نيومان
+    born: 1903
+    died: 1957
+    categories:
+      - mathematics
+      - computer_science
+      - physics
+    description:
+      en: >
+        Hungarian-American polymath who made major contributions to
+        mathematics, physics, computer science, and economics. He
+        designed the von Neumann architecture that underpins virtually
+        all modern computers and contributed to quantum mechanics and game theory.
+      ar: >
+        عالم موسوعي مجري أمريكي قدّم إسهامات كبرى في الرياضيات والفيزياء
+        وعلوم الحاسوب والاقتصاد. صمّم بنية فون نيومان التي تقوم عليها
+        جميع الحواسيب الحديثة تقريباً.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/JohnvonNeumann-LosAlamos.gif/330px-JohnvonNeumann-LosAlamos.gif
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/John_von_Neumann
+      ar: https://ar.wikipedia.org/wiki/جون_فون_نيومان
+    relations:
+      - type: colleague
+        target: alan_turing
+
+  - id: richard_feynman
+    name:
+      en: Richard Feynman
+      ar: ريتشارد فاينمان
+    born: 1918
+    died: 1988
+    categories:
+      - physics
+    description:
+      en: >
+        American theoretical physicist known for his work in quantum
+        electrodynamics, for which he shared the Nobel Prize in 1965.
+        He pioneered the concept of quantum computing and was famous
+        for his accessible lectures and curious personality.
+      ar: >
+        فيزيائي نظري أمريكي اشتهر بعمله في الديناميكا الكهربائية
+        الكمية التي نال عنها جائزة نوبل عام 1965. كان رائداً في
+        مفهوم الحوسبة الكمية واشتهر بمحاضراته الميسّرة.
+    image: https://upload.wikimedia.org/wikipedia/en/thumb/4/42/Richard_Feynman_Nobel.jpg/330px-Richard_Feynman_Nobel.jpg
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Richard_Feynman
+      ar: https://ar.wikipedia.org/wiki/ريتشارد_فاينمان
+
+  - id: niels_bohr
+    name:
+      en: Niels Bohr
+      ar: نيلز بور
+    born: 1885
+    died: 1962
+    categories:
+      - physics
+    description:
+      en: >
+        Danish physicist who made foundational contributions to understanding
+        atomic structure and quantum theory, for which he received the
+        Nobel Prize in Physics in 1922. His Bohr model of the atom
+        was a milestone in modern physics.
+      ar: >
+        فيزيائي دنماركي قدّم إسهامات تأسيسية في فهم البنية الذرية
+        ونظرية الكم ونال جائزة نوبل في الفيزياء عام 1922.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Niels_Bohr.jpg/330px-Niels_Bohr.jpg
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Niels_Bohr
+      ar: https://ar.wikipedia.org/wiki/نيلز_بور
+    relations:
+      - type: influenced
+        target: einstein
+
+  - id: max_planck
+    name:
+      en: Max Planck
+      ar: ماكس بلانك
+    born: 1858
+    died: 1947
+    categories:
+      - physics
+    description:
+      en: >
+        German theoretical physicist whose discovery of energy quanta
+        earned him the Nobel Prize in Physics in 1918 and launched the
+        quantum revolution. He is regarded as the father of quantum theory.
+      ar: >
+        فيزيائي نظري ألماني أدى اكتشافه لكمات الطاقة إلى حصوله على
+        جائزة نوبل في الفيزياء عام 1918 وأطلق ثورة الكم. يُعتبر أب نظرية الكم.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Max_Planck_%281858-1947%29.jpg/330px-Max_Planck_%281858-1947%29.jpg
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Max_Planck
+      ar: https://ar.wikipedia.org/wiki/ماكس_بلانك
+    relations:
+      - type: influenced
+        target: einstein
+
+  - id: marie_curie
+    name:
+      en: Marie Curie
+      ar: ماري كوري
+    born: 1867
+    died: 1934
+    categories:
+      - physics
+      - science
+    description:
+      en: >
+        Polish-French physicist and chemist who conducted pioneering
+        research on radioactivity. She was the first woman to win a
+        Nobel Prize and remains the only person to win Nobel Prizes
+        in two different sciences (Physics 1903, Chemistry 1911).
+      ar: >
+        فيزيائية وكيميائية بولندية فرنسية أجرت أبحاثاً رائدة في
+        النشاط الإشعاعي. كانت أول امرأة تفوز بجائزة نوبل والوحيدة
+        التي فازت بها في علمين مختلفين.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Marie_Curie_c._1920s.jpg/330px-Marie_Curie_c._1920s.jpg
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Marie_Curie
+      ar: https://ar.wikipedia.org/wiki/ماري_كوري
+
+  - id: nikola_tesla
+    name:
+      en: Nikola Tesla
+      ar: نيكولا تيسلا
+    born: 1856
+    died: 1943
+    categories:
+      - physics
+      - science
+    description:
+      en: >
+        Serbian-American inventor and electrical engineer best known
+        for his contributions to the design of the modern alternating
+        current (AC) electrical supply system. He held over 300 patents
+        and envisioned wireless communication decades before its realization.
+      ar: >
+        مخترع ومهندس كهربائي صربي أمريكي اشتهر بإسهاماته في تصميم
+        نظام التيار المتردد الحديث. حمل أكثر من 300 براءة اختراع
+        وتصوّر الاتصالات اللاسلكية قبل عقود من تحقيقها.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/N.Tesla.JPG/330px-N.Tesla.JPG
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Nikola_Tesla
+      ar: https://ar.wikipedia.org/wiki/نيكولا_تسلا
+
+  - id: stephen_hawking
+    name:
+      en: Stephen Hawking
+      ar: ستيفن هوكينغ
+    born: 1942
+    died: 2018
+    categories:
+      - physics
+      - astronomy
+    description:
+      en: >
+        British theoretical physicist and cosmologist known for his
+        work on black holes and Hawking radiation. His book "A Brief
+        History of Time" made cosmology accessible to millions worldwide.
+      ar: >
+        فيزيائي نظري وعالم كونيات بريطاني اشتهر بعمله على الثقوب
+        السوداء وإشعاع هوكينغ. جعل كتابه "موجز تاريخ الزمن"
+        علم الكونيات في متناول الملايين.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Stephen_Hawking.StarChild.jpg/330px-Stephen_Hawking.StarChild.jpg
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Stephen_Hawking
+      ar: https://ar.wikipedia.org/wiki/ستيفن_هوكينغ
+    relations:
+      - type: influenced
+        target: einstein
+
+  - id: tim_berners_lee
+    name:
+      en: Tim Berners-Lee
+      ar: تيم بيرنرز لي
+    born: 1955
+    died: 2025
+    categories:
+      - computer_science
+    description:
+      en: >
+        British computer scientist best known as the inventor of the
+        World Wide Web. He wrote the first web browser and web server,
+        and established the foundational protocols (HTTP, HTML, URLs)
+        that power the modern internet.
+      ar: >
+        عالم حاسوب بريطاني اشتهر بابتكار شبكة الويب العالمية.
+        كتب أول متصفح وخادم ويب ووضع البروتوكولات التأسيسية
+        التي تشغّل الإنترنت الحديث.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Sir_Tim_Berners-Lee_%28cropped%29.jpg/330px-Sir_Tim_Berners-Lee_%28cropped%29.jpg
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Tim_Berners-Lee
+      ar: https://ar.wikipedia.org/wiki/تيم_بيرنرز_لي
+    relations:
+      - type: influenced
+        target: alan_turing
+
+  - id: claude_shannon
+    name:
+      en: Claude Shannon
+      ar: كلود شانون
+    born: 1916
+    died: 2001
+    categories:
+      - mathematics
+      - computer_science
+    description:
+      en: >
+        American mathematician and electrical engineer known as the
+        "father of information theory." His 1948 paper established
+        the mathematical framework for digital communication that
+        underpins all modern computing and telecommunications.
+      ar: >
+        عالم رياضيات ومهندس كهربائي أمريكي يُعرف بـ"أبو نظرية المعلومات".
+        أسّست ورقته عام 1948 الإطار الرياضي للاتصالات الرقمية الذي
+        تقوم عليه جميع الحوسبة والاتصالات الحديثة.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/ClaudeShannon_MFO3807.jpg/330px-ClaudeShannon_MFO3807.jpg
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Claude_Shannon
+      ar: https://ar.wikipedia.org/wiki/كلود_شانون
+    relations:
+      - type: colleague
+        target: alan_turing
+
+  # ---- The Creator ----
+
+  - id: ahmed_akef
+    name:
+      en: Ahmed Akef
+      ar: أحمد عاكف
+    born: 1997
+    died: 2026
+    categories:
+      - computer_science
+      - astronomy
+      - poetry
+      - islam
+    description:
+      en: >
+        The creator of History Weaver. A polymath spirit passionate about
+        astronomy, computer science, poetry, and religion. Built this
+        application to help people visualize the connections between
+        historical figures and understand the flow of knowledge across centuries.
+      ar: >
+        صانع تطبيق "نسّاج التاريخ". روح موسوعية شغوفة بالفلك وعلوم
+        الحاسوب والشعر والدين. بنى هذا التطبيق لمساعدة الناس على
+        تصوّر الروابط بين الشخصيات التاريخية وفهم تدفق المعرفة عبر القرون.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/History_Weaver
