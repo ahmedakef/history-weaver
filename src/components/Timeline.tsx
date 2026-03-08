@@ -134,8 +134,7 @@ export default function Timeline({ figures, allFigures, categoryDefs }: Props) {
   }, [selectedFigure]);
 
   const formatTickYear = (year: number) => {
-    if (calendar === "hijri") return `${gregorianToHijri(year)}`;
-    return `${year}`;
+    return formatYear(year, calendar, lang).replace(/ (AH|CE|هـ|م)$/, '');
   };
 
   return (
