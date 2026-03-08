@@ -303,6 +303,8 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
           })}
         </AnimatePresence>
       </div>
+        </div>{/* end inner width container */}
+      </div>{/* end scrollable area */}
 
       {/* Detail panel */}
       <AnimatePresence>
