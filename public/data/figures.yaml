@@ -496,3 +496,368 @@ figures:
     wikipedia:
       en: https://en.wikipedia.org/wiki/Ibn_Khaldun
       ar: https://ar.wikipedia.org/wiki/ابن_خلدون
+
+  # ---- Ancient Era (BC) ----
+
+  - id: socrates
+    name:
+      en: Socrates
+      ar: سقراط
+    born: -469
+    died: -398
+    categories:
+      - philosophy
+    description:
+      en: >
+        Classical Greek philosopher credited as the founder of Western
+        philosophy. Known for his Socratic method of questioning, he
+        left no writings—his ideas survive through the works of his
+        students, especially Plato.
+      ar: >
+        فيلسوف يوناني كلاسيكي يُنسب إليه تأسيس الفلسفة الغربية.
+        عُرف بمنهجه السقراطي في الاستجواب، ولم يترك كتابات—
+        بقيت أفكاره من خلال أعمال تلاميذه، خاصة أفلاطون.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Socrates
+      ar: https://ar.wikipedia.org/wiki/سقراط
+    relations:
+      - type: teacher_of
+        target: plato
+
+  - id: hippocrates
+    name:
+      en: Hippocrates
+      ar: أبقراط
+    born: -460
+    died: -370
+    categories:
+      - medicine
+    description:
+      en: >
+        Ancient Greek physician regarded as the "Father of Medicine."
+        He established medicine as a discipline distinct from philosophy
+        and religion. The Hippocratic Oath remains a foundational
+        ethical guide for physicians.
+      ar: >
+        طبيب يوناني قديم يُعتبر "أبا الطب." أسّس الطب كعلم
+        مستقل عن الفلسفة والدين. لا يزال قَسَم أبقراط
+        دليلاً أخلاقياً أساسياً للأطباء.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Hippocrates
+      ar: https://ar.wikipedia.org/wiki/أبقراط
+
+  - id: plato
+    name:
+      en: Plato
+      ar: أفلاطون
+    born: -427
+    died: -347
+    categories:
+      - philosophy
+    description:
+      en: >
+        Athenian philosopher and founder of the Academy, the first
+        institution of higher learning in the Western world. His dialogues
+        explored justice, beauty, and the theory of Forms, profoundly
+        shaping Western thought.
+      ar: >
+        فيلسوف أثيني ومؤسس الأكاديمية، أول مؤسسة للتعليم العالي
+        في العالم الغربي. استكشفت حواراته العدالة والجمال
+        ونظرية المُثُل، مشكّلاً الفكر الغربي بعمق.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Plato
+      ar: https://ar.wikipedia.org/wiki/أفلاطون
+    relations:
+      - type: teacher_of
+        target: aristotle
+      - type: student_of
+        target: socrates
+
+  - id: aristotle
+    name:
+      en: Aristotle
+      ar: أرسطو
+    born: -383
+    died: -321
+    categories:
+      - philosophy
+      - science
+    description:
+      en: >
+        Greek philosopher and polymath, student of Plato and tutor of
+        Alexander the Great. His writings on logic, physics, biology,
+        ethics, politics, and metaphysics formed the foundation of
+        Western philosophy and science for millennia.
+      ar: >
+        فيلسوف وعالم موسوعي يوناني، تلميذ أفلاطون ومعلم
+        الإسكندر الأكبر. شكّلت كتاباته في المنطق والفيزياء
+        والأحياء والأخلاق والسياسة والميتافيزيقا أساس الفلسفة
+        والعلوم الغربية لآلاف السنين.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Aristotle
+      ar: https://ar.wikipedia.org/wiki/أرسطو
+    relations:
+      - type: student_of
+        target: plato
+      - type: teacher_of
+        target: alexander_the_great
+
+  - id: alexander_the_great
+    name:
+      en: Alexander the Great
+      ar: الإسكندر الأكبر
+    born: -355
+    died: -322
+    categories:
+      - authority
+    description:
+      en: >
+        King of Macedon who created one of the largest empires in ancient
+        history, stretching from Greece to northwestern India. A student
+        of Aristotle, he spread Greek culture across his vast conquests.
+      ar: >
+        ملك مقدونيا الذي أنشأ واحدة من أكبر الإمبراطوريات في التاريخ
+        القديم، ممتدة من اليونان إلى شمال غرب الهند. تلميذ أرسطو،
+        نشر الثقافة اليونانية عبر فتوحاته الواسعة.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Alexander_the_Great
+      ar: https://ar.wikipedia.org/wiki/الإسكندر_الأكبر
+    relations:
+      - type: student_of
+        target: aristotle
+
+  - id: euclid
+    name:
+      en: Euclid
+      ar: إقليدس
+    born: -325
+    died: -265
+    categories:
+      - mathematics
+    description:
+      en: >
+        Greek mathematician often referred to as the "Father of Geometry."
+        His treatise "Elements" is one of the most influential works in
+        the history of mathematics and served as the main textbook for
+        geometry for over 2,000 years.
+      ar: >
+        عالم رياضيات يوناني يُشار إليه بـ"أبي الهندسة."
+        يُعد كتابه "العناصر" من أكثر الأعمال تأثيراً في تاريخ
+        الرياضيات وكان المرجع الأساسي للهندسة لأكثر من ألفي عام.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Euclid
+      ar: https://ar.wikipedia.org/wiki/إقليدس
+
+  - id: archimedes
+    name:
+      en: Archimedes
+      ar: أرخميدس
+    born: -287
+    died: -211
+    categories:
+      - mathematics
+      - science
+    description:
+      en: >
+        Greek mathematician, physicist, and engineer, considered the
+        greatest mathematician of antiquity. He discovered the principles
+        of buoyancy and the lever, calculated pi with remarkable precision,
+        and invented ingenious war machines.
+      ar: >
+        عالم رياضيات وفيزيائي ومهندس يوناني، يُعتبر أعظم
+        عالم رياضيات في العصور القديمة. اكتشف مبادئ الطفو
+        والرافعة، وحسب العدد باي بدقة ملحوظة.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Archimedes
+      ar: https://ar.wikipedia.org/wiki/أرخميدس
+
+  # ---- Classical Era (CE) ----
+
+  - id: ptolemy
+    name:
+      en: Ptolemy
+      ar: بطليموس
+    born: 100
+    died: 170
+    categories:
+      - astronomy
+      - mathematics
+    description:
+      en: >
+        Greco-Egyptian mathematician, astronomer, and geographer. His
+        astronomical treatise "Almagest" presented the geocentric model
+        and remained the authority on astronomy for over a thousand years.
+      ar: >
+        عالم رياضيات وفلك وجغرافيا يوناني-مصري. قدّم كتابه
+        "المجسطي" النموذج الجيومركزي وظل المرجع في علم الفلك
+        لأكثر من ألف عام.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Ptolemy
+      ar: https://ar.wikipedia.org/wiki/بطليموس
+
+  - id: galen
+    name:
+      en: Galen
+      ar: جالينوس
+    born: 129
+    died: 216
+    categories:
+      - medicine
+    description:
+      en: >
+        Greco-Roman physician and philosopher. The most accomplished
+        medical researcher of antiquity, his theories dominated Western
+        and Islamic medicine for more than 1,300 years.
+      ar: >
+        طبيب وفيلسوف يوناني-روماني. أبرز الباحثين الطبيين
+        في العصور القديمة، هيمنت نظرياته على الطب الغربي
+        والإسلامي لأكثر من 1300 عام.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Galen
+      ar: https://ar.wikipedia.org/wiki/جالينوس
+
+  # ---- Late Medieval / Early Modern ----
+
+  - id: ibn_al_nafis
+    name:
+      en: Ibn al-Nafis
+      ar: ابن النفيس
+    born: 1213
+    died: 1288
+    categories:
+      - medicine
+      - fiqh
+    description:
+      en: >
+        Arab physician who first described pulmonary circulation,
+        predating William Harvey by nearly 400 years. He also wrote
+        on ophthalmology and Islamic jurisprudence.
+      ar: >
+        طبيب عربي وصف الدورة الدموية الرئوية لأول مرة،
+        سابقاً ويليام هارفي بنحو 400 عام. كتب أيضاً
+        في طب العيون والفقه الإسلامي.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Ibn_al-Nafis
+      ar: https://ar.wikipedia.org/wiki/ابن_النفيس
+
+  - id: copernicus
+    name:
+      en: Nicolaus Copernicus
+      ar: نيكولاس كوبرنيكوس
+    born: 1473
+    died: 1543
+    categories:
+      - astronomy
+      - mathematics
+    description:
+      en: >
+        Renaissance polymath who formulated the heliocentric model of
+        the universe. His work "De revolutionibus" launched the
+        Scientific Revolution.
+      ar: >
+        عالم موسوعي من عصر النهضة صاغ النموذج الشمسي المركزي
+        للكون. أطلق كتابه "في دوران الأجرام السماوية" الثورة العلمية.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Nicolaus_Copernicus
+      ar: https://ar.wikipedia.org/wiki/نيكولاس_كوبرنيكوس
+
+  - id: galileo
+    name:
+      en: Galileo Galilei
+      ar: غاليليو غاليلي
+    born: 1564
+    died: 1642
+    categories:
+      - astronomy
+      - science
+    description:
+      en: >
+        Italian astronomer and physicist called the "Father of Modern
+        Science." His telescopic observations confirmed the heliocentric
+        model and his studies of motion laid the groundwork for
+        Newton's laws.
+      ar: >
+        فلكي وفيزيائي إيطالي يُلقب بـ"أبي العلم الحديث."
+        أكدت ملاحظاته التلسكوبية النموذج الشمسي المركزي
+        ووضعت دراساته للحركة أساس قوانين نيوتن.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Galileo_Galilei
+      ar: https://ar.wikipedia.org/wiki/غاليليو_غاليلي
+    relations:
+      - type: influenced
+        target: copernicus
+
+  - id: newton
+    name:
+      en: Isaac Newton
+      ar: إسحاق نيوتن
+    born: 1643
+    died: 1727
+    categories:
+      - mathematics
+      - science
+    description:
+      en: >
+        English mathematician and physicist widely recognized as one of
+        the greatest scientists of all time. He formulated the laws of
+        motion and universal gravitation, co-invented calculus, and made
+        foundational contributions to optics.
+      ar: >
+        عالم رياضيات وفيزياء إنجليزي يُعتبر من أعظم العلماء
+        في التاريخ. صاغ قوانين الحركة والجاذبية الكونية وشارك
+        في اختراع حساب التفاضل والتكامل.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Isaac_Newton
+      ar: https://ar.wikipedia.org/wiki/إسحاق_نيوتن
+    relations:
+      - type: influenced
+        target: galileo
+
+  # ---- Modern Era ----
+
+  - id: darwin
+    name:
+      en: Charles Darwin
+      ar: تشارلز داروين
+    born: 1809
+    died: 1882
+    categories:
+      - science
+    description:
+      en: >
+        English naturalist who established that all species descended
+        from common ancestors through natural selection. His "On the
+        Origin of Species" is one of the most transformative scientific
+        works ever published.
+      ar: >
+        عالم طبيعيات إنجليزي أثبت أن جميع الأنواع تنحدر من أسلاف
+        مشتركة عبر الانتقاء الطبيعي. يُعد كتابه "أصل الأنواع"
+        من أكثر الأعمال العلمية تحولية في التاريخ.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Charles_Darwin
+      ar: https://ar.wikipedia.org/wiki/تشارلز_داروين
+
+  - id: einstein
+    name:
+      en: Albert Einstein
+      ar: ألبرت أينشتاين
+    born: 1879
+    died: 1955
+    categories:
+      - science
+      - mathematics
+    description:
+      en: >
+        German-born theoretical physicist who developed the theory of
+        relativity, one of the two pillars of modern physics. His
+        mass-energy equivalence formula E=mc² is the world's most
+        famous equation.
+      ar: >
+        فيزيائي نظري ألماني المولد طوّر نظرية النسبية، أحد ركيزتي
+        الفيزياء الحديثة. تُعد معادلته E=mc² أشهر معادلة في العالم.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Albert_Einstein
+      ar: https://ar.wikipedia.org/wiki/ألبرت_أينشتاين
+    relations:
+      - type: influenced
+        target: newton
