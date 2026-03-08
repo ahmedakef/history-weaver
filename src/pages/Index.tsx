@@ -59,7 +59,7 @@ const Index = () => {
           <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3 font-body">
             {t("filter_label")}
           </h2>
-          <CategoryFilter active={activeCategories} onToggle={toggleCategory} />
+          <CategoryFilter active={activeCategories} onToggle={toggleCategory} categoryDefs={categoryDefs} />
         </motion.div>
 
         {/* Timeline */}
