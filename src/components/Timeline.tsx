@@ -302,7 +302,7 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
                         className="text-sm bg-secondary hover:bg-secondary/80 rounded-lg px-3 py-1.5 transition-colors"
                       >
                         <span className="text-muted-foreground">
-                          {t(rel.type)}
+                          {relTypeNameMap.get(rel.type) || rel.type}
                         </span>{" "}
                         <span className="font-medium">
                           {target ? resolveTranslation(target.name, lang) : rel.target}
