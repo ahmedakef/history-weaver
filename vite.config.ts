@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => ({
   // For GitHub Pages: set base to "/<repo-name>/" in production
   // e.g. base: "/history-weaver/"
   // Leave as "/" for custom domains or local dev
-  base: "/history-weaver/",
+  base: mode === "production" ? "/history-weaver/" : "/",
   server: {
     host: "::",
     port: 8080,
