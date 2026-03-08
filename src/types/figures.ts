@@ -1,5 +1,3 @@
-export type Category = "science" | "religion" | "authority" | "philosophy";
-
 export type RelationType =
   | "father_of"
   | "mother_of"
@@ -22,15 +20,17 @@ export interface Figure {
   name: Translatable;
   born: number;
   died: number;
-  categories: Category[];
+  categories: string[];
   description: Translatable;
   relations?: Relation[];
   wikipedia?: Record<string, string>;
 }
 
 export interface CategoryDef {
-  id: Category;
+  id: string;
   name: Translatable;
+  color?: string;
+  children?: CategoryDef[];
 }
 
 export interface RelationTypeDef {
@@ -48,4 +48,43 @@ export interface FiguresData {
 export function resolveTranslation(value: Translatable, lang: string): string {
   if (typeof value === "string") return value;
   return value[lang] || value["en"] || Object.values(value)[0] || "";
+}
+
+/**
+ * Build a map from each category id to its root ancestor id.
+ * Also build a map from each category id to all its descendant ids (including itself).
+ */
+export function buildCategoryMaps(categories: CategoryDef[]) {
+  const rootMap = new Map<string, string>(); // catId -> root catId
+  const descendantsMap = new Map<string, Set<string>>(); // catId -> all descendants including self
+
+  function walk(cat: CategoryDef, rootId: string) {
+    rootMap.set(cat.id, rootId);
+    const descendants = new Set<string>([cat.id]);
+    if (cat.children) {
+      for (const child of cat.children) {
+        walk(child, rootId);
+        const childDescs = descendantsMap.get(child.id)!;
+        childDescs.forEach((d) => descendants.add(d));
+      }
+    }
+    descendantsMap.set(cat.id, descendants);
+  }
+
+  for (const cat of categories) {
+    walk(cat, cat.id);
+  }
+
+  return { rootMap, descendantsMap };
+}
+
+/** Flatten a category tree into a flat list */
+export function flattenCategories(categories: CategoryDef[]): CategoryDef[] {
+  const result: CategoryDef[] = [];
+  function walk(cat: CategoryDef) {
+    result.push(cat);
+    if (cat.children) cat.children.forEach(walk);
+  }
+  categories.forEach(walk);
+  return result;
 }
