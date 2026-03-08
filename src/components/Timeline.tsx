@@ -23,9 +23,10 @@ interface Props {
   figures: Figure[];
   allFigures: Figure[];
   categoryDefs: CategoryDef[];
+  relationTypeDefs: RelationTypeDef[];
 }
 
-export default function Timeline({ figures, allFigures, categoryDefs }: Props) {
+export default function Timeline({ figures, allFigures, categoryDefs, relationTypeDefs }: Props) {
   const { lang, calendar, t } = useI18n();
 
   const catNameMap = useMemo(() => {
