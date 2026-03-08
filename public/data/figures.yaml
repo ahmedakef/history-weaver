@@ -96,6 +96,8 @@ figures:
       ar: >
         عالم مشهور في الرياضيات واللاهوت في بغداد.
         معروف بإسهاماته في الجبر والدراسات القرآنية.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Ahmed_ibn_Ali
     relations:
       - type: father_of
         target: mohamed_ibn_ahmed
@@ -136,6 +138,9 @@ figures:
       ar: >
         أبو البصريات الحديثة. كتابه "المناظر" غيّر بشكل جذري
         فهم الضوء والرؤية.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Ibn_al-Haytham
+      ar: https://ar.wikipedia.org/wiki/ابن_الهيثم
     relations:
       - type: teacher_of
         target: mohamed_ibn_ahmed
@@ -156,6 +161,9 @@ figures:
       ar: >
         أحد أكثر علماء المسلمين تأثيرًا في اللاهوت والفلسفة.
         أعاد كتابه "تهافت الفلاسفة" تشكيل الفكر الإسلامي.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Al-Ghazali
+      ar: https://ar.wikipedia.org/wiki/أبو_حامد_الغزالي
 
   - id: saladin
     name:
@@ -173,6 +181,10 @@ figures:
         أول سلطان لمصر والشام، مؤسس الدولة الأيوبية.
         معروف باستعادة القدس خلال الحروب الصليبية.
 
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Saladin
+      ar: https://ar.wikipedia.org/wiki/صلاح_الدين_الأيوبي
+
   - id: ibn_rushd
     name:
       en: Ibn Rushd (Averroes)
@@ -189,6 +201,9 @@ figures:
       ar: >
         فيلسوف وعالم موسوعي أندلسي. أثرت شروحاته على أرسطو
         تأثيرًا عميقًا في الفكر الإسلامي والأوروبي.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Averroes
+      ar: https://ar.wikipedia.org/wiki/ابن_رشد
     relations:
       - type: influenced
         target: al_ghazali
@@ -210,6 +225,10 @@ figures:
         عالم موسوعي فارسي يُعتبر أبا الطب الحديث المبكر.
         كان كتابه "القانون في الطب" مرجعًا طبيًا لقرون.
 
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Avicenna
+      ar: https://ar.wikipedia.org/wiki/ابن_سينا
+
   - id: nizam_al_mulk
     name:
       en: Nizam al-Mulk
@@ -225,6 +244,9 @@ figures:
       ar: >
         عالم ووزير فارسي في الدولة السلجوقية. أسس شبكة
         المدارس النظامية، من أوائل الجامعات في التاريخ.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Nizam_al-Mulk
+      ar: https://ar.wikipedia.org/wiki/نظام_الملك
     relations:
       - type: influenced
         target: al_ghazali
@@ -246,6 +268,10 @@ figures:
         عالم رياضيات وفلكي وشاعر فارسي. معروف بأعماله في
         المعادلات التكعيبية ومجموعة الرباعيات الشهيرة.
 
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Omar_Khayyam
+      ar: https://ar.wikipedia.org/wiki/عمر_الخيام
+
   - id: al_biruni
     name:
       en: Abu Rayhan al-Biruni
@@ -261,6 +287,9 @@ figures:
       ar: >
         عالم موسوعي برع في الرياضيات والفلك والعلوم الطبيعية.
         حسب محيط الأرض بدقة.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Al-Biruni
+      ar: https://ar.wikipedia.org/wiki/البيروني
     relations:
       - type: colleague
         target: ibn_sina

@@ -24,6 +24,7 @@ const translations: Record<Language, Record<string, string>> = {
     footer_note: "Data is stored in",
     footer_edit: "— edit it to add more historical figures",
     relations: "Relations",
+    wikipedia: "Wikipedia",
     
     language: "Language",
     calendar: "Calendar",
@@ -41,6 +42,7 @@ const translations: Record<Language, Record<string, string>> = {
     footer_note: "البيانات مخزنة في",
     footer_edit: "— عدّلها لإضافة المزيد من الشخصيات التاريخية",
     relations: "العلاقات",
+    wikipedia: "ويكيبيديا",
     language: "اللغة",
     calendar: "التقويم",
     gregorian: "ميلادي",

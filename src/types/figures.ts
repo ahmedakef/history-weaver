@@ -25,6 +25,7 @@ export interface Figure {
   categories: Category[];
   description: Translatable;
   relations?: Relation[];
+  wikipedia?: Record<string, string>;
 }
 
 export interface CategoryDef {
