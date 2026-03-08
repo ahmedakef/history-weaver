@@ -134,8 +134,7 @@ export default function Timeline({ figures, allFigures, categoryDefs }: Props) {
   }, [selectedFigure]);
 
   const formatTickYear = (year: number) => {
-    if (calendar === "hijri") return `${gregorianToHijri(year)}`;
-    return `${year}`;
+    return formatYear(year, calendar, lang).replace(/ (AH|CE|هـ|م)$/, '');
   };
 
   return (
@@ -235,7 +234,7 @@ export default function Timeline({ figures, allFigures, categoryDefs }: Props) {
                   </span>
                 </div>
                 <div className="text-xs text-muted-foreground">
-                  {formatRange(figure.born, figure.died, calendar)}
+                  {formatRange(figure.born, figure.died, calendar, lang)}
                 </div>
               </motion.div>
             );
@@ -258,7 +257,7 @@ export default function Timeline({ figures, allFigures, categoryDefs }: Props) {
                   {resolveTranslation(selectedFigure.name, lang)}
                 </h2>
                 <p className="text-sm text-muted-foreground mt-1">
-                  {formatRange(selectedFigure.born, selectedFigure.died, calendar)}
+                  {formatRange(selectedFigure.born, selectedFigure.died, calendar, lang)}
                 </p>
                 <div className="flex gap-2 mt-2">
                   {selectedFigure.categories.map((cat) => (
