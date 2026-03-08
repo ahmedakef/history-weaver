@@ -122,11 +122,25 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
       const srcRect = srcEl.getBoundingClientRect();
       const tgtRect = tgtEl.getBoundingClientRect();
 
+      const x1 = srcRect.left + srcRect.width / 2 - containerRect.left;
+      const y1 = srcRect.top + srcRect.height / 2 - containerRect.top;
+      const x2 = tgtRect.left + tgtRect.width / 2 - containerRect.left;
+      const y2 = tgtRect.top + tgtRect.height / 2 - containerRect.top;
+
+      // Create a curved path that arcs above/below the bars
+      const dx = x2 - x1;
+      const dy = y2 - y1;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      const curveOffset = Math.min(dist * 0.4, 120) * (y2 >= y1 ? -1 : 1);
+
+      const mx = (x1 + x2) / 2;
+      const my = (y1 + y2) / 2 + curveOffset;
+
       newLines.push({
-        x1: srcRect.left + srcRect.width / 2 - containerRect.left,
-        y1: srcRect.top + srcRect.height / 2 - containerRect.top,
-        x2: tgtRect.left + tgtRect.width / 2 - containerRect.left,
-        y2: tgtRect.top + tgtRect.height / 2 - containerRect.top,
+        x1, y1, x2, y2,
+        path: `M ${x1} ${y1} Q ${mx} ${my} ${x2} ${y2}`,
+        labelX: mx,
+        labelY: my,
         label: relTypeNameMap.get(rel.type) || rel.type,
       });
     }
