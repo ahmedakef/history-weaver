@@ -181,6 +181,10 @@ figures:
         أول سلطان لمصر والشام، مؤسس الدولة الأيوبية.
         معروف باستعادة القدس خلال الحروب الصليبية.
 
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Saladin
+      ar: https://ar.wikipedia.org/wiki/صلاح_الدين_الأيوبي
+
   - id: ibn_rushd
     name:
       en: Ibn Rushd (Averroes)
@@ -197,6 +201,9 @@ figures:
       ar: >
         فيلسوف وعالم موسوعي أندلسي. أثرت شروحاته على أرسطو
         تأثيرًا عميقًا في الفكر الإسلامي والأوروبي.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Averroes
+      ar: https://ar.wikipedia.org/wiki/ابن_رشد
     relations:
       - type: influenced
         target: al_ghazali
