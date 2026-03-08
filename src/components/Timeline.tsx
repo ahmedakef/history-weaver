@@ -122,7 +122,7 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
         y1: srcRect.top + srcRect.height / 2 - containerRect.top,
         x2: tgtRect.left + tgtRect.width / 2 - containerRect.left,
         y2: tgtRect.top + tgtRect.height / 2 - containerRect.top,
-        label: t(rel.type) || rel.type,
+        label: relTypeNameMap.get(rel.type) || rel.type,
       });
     }
 
