@@ -10,6 +10,7 @@ export function useFigures(activeCategories: Category[]) {
 
   const allFigures = query.data?.figures ?? [];
   const categoryDefs = query.data?.categories ?? [];
+  const relationTypeDefs = query.data?.relation_types ?? [];
 
   const filtered =
     activeCategories.length === 0
@@ -18,5 +19,5 @@ export function useFigures(activeCategories: Category[]) {
           f.categories.some((c) => activeCategories.includes(c))
         );
 
-  return { ...query, allFigures, filtered, categoryDefs };
+  return { ...query, allFigures, filtered, categoryDefs, relationTypeDefs };
 }

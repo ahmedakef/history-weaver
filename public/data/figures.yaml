@@ -21,6 +21,36 @@ categories:
     name:
       en: Philosophy
       ar: فلسفة
+
+relation_types:
+  - id: father_of
+    name:
+      en: Father of
+      ar: والد
+  - id: mother_of
+    name:
+      en: Mother of
+      ar: والدة
+  - id: child_of
+    name:
+      en: Child of
+      ar: ابن/ابنة
+  - id: teacher_of
+    name:
+      en: Teacher of
+      ar: أستاذ
+  - id: student_of
+    name:
+      en: Student of
+      ar: تلميذ
+  - id: influenced
+    name:
+      en: Influenced
+      ar: أثّر على
+  - id: colleague
+    name:
+      en: Colleague of
+      ar: زميل
 # HOW TO ADD A NEW PERSON:
 #
 # Copy the template below and fill in the details:

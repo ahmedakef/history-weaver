@@ -32,8 +32,14 @@ export interface CategoryDef {
   name: Translatable;
 }
 
+export interface RelationTypeDef {
+  id: RelationType;
+  name: Translatable;
+}
+
 export interface FiguresData {
   categories: CategoryDef[];
+  relation_types: RelationTypeDef[];
   figures: Figure[];
 }
 
