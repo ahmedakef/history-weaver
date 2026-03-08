@@ -120,6 +120,193 @@ figures:
 
   # ---- The Islamic Golden Age ----
 
+  - id: al_khwarizmi
+    name:
+      en: Al-Khwarizmi
+      ar: محمد بن موسى الخوارزمي
+    born: 780
+    died: 850
+    categories:
+      - mathematics
+      - astronomy
+    description:
+      en: >
+        Persian polymath who produced vastly influential works in mathematics,
+        astronomy, and geography. His name gave rise to the term "algorithm,"
+        and his book on algebra introduced systematic methods for solving
+        linear and quadratic equations.
+      ar: >
+        عالم موسوعي فارسي أنتج أعمالاً مؤثرة في الرياضيات والفلك والجغرافيا.
+        اشتُق مصطلح "الخوارزمية" من اسمه، وقدّم كتابه في الجبر أساليب
+        منهجية لحل المعادلات الخطية والتربيعية.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Al-Khwarizmi
+      ar: https://ar.wikipedia.org/wiki/الخوارزمي
+    relations:
+      - type: influenced
+        target: al_kindi
+
+  - id: al_kindi
+    name:
+      en: Al-Kindi
+      ar: الكندي
+    born: 801
+    died: 873
+    categories:
+      - philosophy
+      - mathematics
+      - medicine
+    description:
+      en: >
+        Arab philosopher, mathematician, and physician, known as the
+        "Father of Arab philosophy." He was the first of the Muslim
+        peripatetic philosophers, introducing Greek philosophy to the
+        Islamic world and pioneering cryptanalysis.
+      ar: >
+        فيلسوف وعالم رياضيات وطبيب عربي، يُعرف بـ"أبو الفلسفة العربية."
+        كان أول الفلاسفة المشّائين المسلمين، أدخل الفلسفة اليونانية
+        إلى العالم الإسلامي وكان رائداً في تحليل الشفرات.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Al-Kindi
+      ar: https://ar.wikipedia.org/wiki/الكندي
+    relations:
+      - type: influenced
+        target: al_farabi
+
+  - id: al_tabari
+    name:
+      en: Al-Tabari
+      ar: الطبري
+    born: 839
+    died: 923
+    categories:
+      - hadith
+      - fiqh
+    description:
+      en: >
+        Persian Muslim scholar, historian, and Quranic exegete. He is best
+        known for his monumental universal history "History of the Prophets
+        and Kings" and his comprehensive Quran commentary "Tafsir al-Tabari,"
+        both foundational works in Islamic scholarship.
+      ar: >
+        عالم مسلم فارسي ومؤرخ ومفسر للقرآن. اشتهر بموسوعته التاريخية
+        "تاريخ الرسل والملوك" وتفسيره الشامل "تفسير الطبري"،
+        وكلاهما من الأعمال التأسيسية في العلوم الإسلامية.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Al-Tabari
+      ar: https://ar.wikipedia.org/wiki/الطبري
+
+  - id: al_farabi
+    name:
+      en: Al-Farabi
+      ar: الفارابي
+    born: 870
+    died: 950
+    categories:
+      - philosophy
+      - mathematics
+    description:
+      en: >
+        Known as the "Second Teacher" (after Aristotle), Al-Farabi was a
+        renowned philosopher and music theorist. He wrote on logic, political
+        philosophy, metaphysics, ethics, and the classification of sciences,
+        deeply influencing Avicenna and the broader Islamic intellectual tradition.
+      ar: >
+        يُعرف بـ"المعلم الثاني" (بعد أرسطو)، كان الفارابي فيلسوفاً ومنظّراً
+        موسيقياً. كتب في المنطق والفلسفة السياسية والميتافيزيقا والأخلاق
+        وتصنيف العلوم، وأثّر بعمق في ابن سينا والتقليد الفكري الإسلامي.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Al-Farabi
+      ar: https://ar.wikipedia.org/wiki/الفارابي
+    relations:
+      - type: teacher_of
+        target: ibn_sina
+      - type: influenced
+        target: ibn_rushd
+
+  - id: ibn_al_haytham
+    name:
+      en: Ibn al-Haytham (Alhazen)
+      ar: ابن الهيثم
+    born: 965
+    died: 1040
+    categories:
+      - optics
+      - mathematics
+      - astronomy
+    description:
+      en: >
+        Arab physicist, mathematician, and astronomer, widely regarded as
+        the father of modern optics. His seven-volume "Book of Optics"
+        fundamentally changed the understanding of light and vision and
+        introduced the scientific method of experimentation.
+      ar: >
+        عالم فيزياء ورياضيات وفلك عربي، يُعتبر على نطاق واسع أبا
+        البصريات الحديثة. غيّر كتابه "المناظر" المؤلف من سبعة مجلدات
+        فهم الضوء والرؤية وأدخل المنهج العلمي التجريبي.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Ibn_al-Haytham
+      ar: https://ar.wikipedia.org/wiki/ابن_الهيثم
+    relations:
+      - type: teacher_of
+        target: mohamed_ibn_ahmed
+
+  - id: al_biruni
+    name:
+      en: Abu Rayhan al-Biruni
+      ar: أبو الريحان البيروني
+    born: 973
+    died: 1048
+    categories:
+      - mathematics
+      - astronomy
+    description:
+      en: >
+        A polymath who excelled in mathematics, astronomy, natural sciences,
+        and history. He accurately calculated the Earth's circumference
+        using trigonometry and wrote extensively on Indian culture,
+        producing one of the finest comparative studies of the medieval era.
+      ar: >
+        عالم موسوعي برع في الرياضيات والفلك والعلوم الطبيعية والتاريخ.
+        حسب محيط الأرض بدقة باستخدام علم المثلثات وكتب بإسهاب عن
+        الثقافة الهندية، منتجاً واحدة من أفضل الدراسات المقارنة في العصور الوسطى.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Al-Biruni
+      ar: https://ar.wikipedia.org/wiki/البيروني
+    relations:
+      - type: colleague
+        target: ibn_sina
+
+  - id: ibn_sina
+    name:
+      en: Ibn Sina (Avicenna)
+      ar: ابن سينا
+    born: 980
+    died: 1037
+    categories:
+      - medicine
+      - philosophy
+    description:
+      en: >
+        Persian polymath regarded as the father of early modern medicine.
+        His "Canon of Medicine" was a standard medical text in Europe and
+        the Islamic world for centuries. He also wrote extensively on
+        philosophy, astronomy, and logic.
+      ar: >
+        عالم موسوعي فارسي يُعتبر أبا الطب الحديث المبكر.
+        كان كتابه "القانون في الطب" مرجعاً طبياً في أوروبا والعالم
+        الإسلامي لقرون. كتب أيضاً بإسهاب في الفلسفة والفلك والمنطق.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Avicenna
+      ar: https://ar.wikipedia.org/wiki/ابن_سينا
+    relations:
+      - type: student_of
+        target: al_farabi
+      - type: colleague
+        target: al_biruni
+      - type: influenced
+        target: al_ghazali
+
   - id: ahmed_ibn_ali
     name:
       en: Ahmed ibn Ali
@@ -142,134 +329,6 @@ figures:
       - type: father_of
         target: mohamed_ibn_ahmed
 
-  - id: mohamed_ibn_ahmed
-    name:
-      en: Mohamed ibn Ahmed
-      ar: محمد بن أحمد
-    born: 1050
-    died: 1120
-    categories:
-      - optics
-      - astronomy
-    description:
-      en: >
-        Son of Ahmed ibn Ali. Continued his father's work in mathematics
-        and made advances in optics and astronomy.
-      ar: >
-        ابن أحمد بن علي. تابع عمل والده في الرياضيات
-        وحقق تقدمًا في البصريات وعلم الفلك.
-    relations:
-      - type: child_of
-        target: ahmed_ibn_ali
-      - type: student_of
-        target: ibn_al_haytham
-
-  - id: ibn_al_haytham
-    name:
-      en: Ibn al-Haytham (Alhazen)
-      ar: ابن الهيثم
-    born: 965
-    died: 1040
-    categories:
-      - optics
-      - mathematics
-    description:
-      en: >
-        The father of modern optics. His Book of Optics fundamentally
-        changed the understanding of light and vision.
-      ar: >
-        أبو البصريات الحديثة. كتابه "المناظر" غيّر بشكل جذري
-        فهم الضوء والرؤية.
-    wikipedia:
-      en: https://en.wikipedia.org/wiki/Ibn_al-Haytham
-      ar: https://ar.wikipedia.org/wiki/ابن_الهيثم
-    relations:
-      - type: teacher_of
-        target: mohamed_ibn_ahmed
-
-  - id: al_ghazali
-    name:
-      en: Abu Hamid al-Ghazali
-      ar: أبو حامد الغزالي
-    born: 1058
-    died: 1111
-    categories:
-      - kalam
-      - fiqh
-      - philosophy
-    description:
-      en: >
-        One of the most influential Muslim theologians and philosophers.
-        His work "The Incoherence of the Philosophers" reshaped Islamic thought.
-      ar: >
-        أحد أكثر علماء المسلمين تأثيرًا في اللاهوت والفلسفة.
-        أعاد كتابه "تهافت الفلاسفة" تشكيل الفكر الإسلامي.
-    wikipedia:
-      en: https://en.wikipedia.org/wiki/Al-Ghazali
-      ar: https://ar.wikipedia.org/wiki/أبو_حامد_الغزالي
-
-  - id: saladin
-    name:
-      en: Salah ad-Din (Saladin)
-      ar: صلاح الدين الأيوبي
-    born: 1137
-    died: 1193
-    categories:
-      - authority
-    description:
-      en: >
-        The first sultan of Egypt and Syria, founder of the Ayyubid dynasty.
-        Known for recapturing Jerusalem during the Crusades.
-      ar: >
-        أول سلطان لمصر والشام، مؤسس الدولة الأيوبية.
-        معروف باستعادة القدس خلال الحروب الصليبية.
-    wikipedia:
-      en: https://en.wikipedia.org/wiki/Saladin
-      ar: https://ar.wikipedia.org/wiki/صلاح_الدين_الأيوبي
-
-  - id: ibn_rushd
-    name:
-      en: Ibn Rushd (Averroes)
-      ar: ابن رشد
-    born: 1126
-    died: 1198
-    categories:
-      - philosophy
-      - fiqh
-    description:
-      en: >
-        Andalusian philosopher and polymath. His commentaries on Aristotle
-        profoundly influenced both Islamic and European thought.
-      ar: >
-        فيلسوف وعالم موسوعي أندلسي. أثرت شروحاته على أرسطو
-        تأثيرًا عميقًا في الفكر الإسلامي والأوروبي.
-    wikipedia:
-      en: https://en.wikipedia.org/wiki/Averroes
-      ar: https://ar.wikipedia.org/wiki/ابن_رشد
-    relations:
-      - type: influenced
-        target: al_ghazali
-
-  - id: ibn_sina
-    name:
-      en: Ibn Sina (Avicenna)
-      ar: ابن سينا
-    born: 980
-    died: 1037
-    categories:
-      - medicine
-      - philosophy
-    description:
-      en: >
-        Persian polymath regarded as the father of early modern medicine.
-        His Canon of Medicine was a standard medical text for centuries.
-      ar: >
-        عالم موسوعي فارسي يُعتبر أبا الطب الحديث المبكر.
-        كان كتابه "القانون في الطب" مرجعًا طبيًا لقرون.
-    wikipedia:
-      en: https://en.wikipedia.org/wiki/Avicenna
-      ar: https://ar.wikipedia.org/wiki/ابن_سينا
-
   - id: nizam_al_mulk
     name:
       en: Nizam al-Mulk
@@ -281,10 +340,12 @@ figures:
     description:
       en: >
         Persian scholar and vizier of the Seljuk Empire. Founded the
-        Nizamiyyah network of madrasas, some of the first universities.
+        Nizamiyyah network of madrasas, some of the first universities
+        in the world, and authored the "Siyasatnama" on statecraft.
       ar: >
         عالم ووزير فارسي في الدولة السلجوقية. أسس شبكة
-        المدارس النظامية، من أوائل الجامعات في التاريخ.
+        المدارس النظامية، من أوائل الجامعات في التاريخ،
+        وألّف كتاب "سياست‌نامه" في فن الحكم.
     wikipedia:
       en: https://en.wikipedia.org/wiki/Nizam_al-Mulk
       ar: https://ar.wikipedia.org/wiki/نظام_الملك
@@ -305,33 +366,133 @@ figures:
     description:
       en: >
         Persian mathematician, astronomer, and poet. Known for his work
-        on cubic equations and the famous Rubaiyat poetry collection.
+        on cubic equations, the Jalali calendar reform, and his famous
+        Rubaiyat poetry collection.
       ar: >
         عالم رياضيات وفلكي وشاعر فارسي. معروف بأعماله في
-        المعادلات التكعيبية ومجموعة الرباعيات الشهيرة.
+        المعادلات التكعيبية وإصلاح التقويم الجلالي ومجموعة الرباعيات الشهيرة.
     wikipedia:
       en: https://en.wikipedia.org/wiki/Omar_Khayyam
       ar: https://ar.wikipedia.org/wiki/عمر_الخيام
 
-  - id: al_biruni
+  - id: mohamed_ibn_ahmed
     name:
-      en: Abu Rayhan al-Biruni
-      ar: أبو الريحان البيروني
-    born: 973
-    died: 1048
+      en: Mohamed ibn Ahmed
+      ar: محمد بن أحمد
+    born: 1050
+    died: 1120
     categories:
-      - mathematics
+      - optics
       - astronomy
     description:
       en: >
-        A polymath who excelled in mathematics, astronomy, and natural sciences.
-        Accurately calculated the Earth's circumference.
+        Son of Ahmed ibn Ali. Continued his father's work in mathematics
+        and made advances in optics and astronomy.
       ar: >
-        عالم موسوعي برع في الرياضيات والفلك والعلوم الطبيعية.
-        حسب محيط الأرض بدقة.
-    wikipedia:
-      en: https://en.wikipedia.org/wiki/Al-Biruni
-      ar: https://ar.wikipedia.org/wiki/البيروني
+        ابن أحمد بن علي. تابع عمل والده في الرياضيات
+        وحقق تقدماً في البصريات وعلم الفلك.
     relations:
-      - type: colleague
-        target: ibn_sina
+      - type: child_of
+        target: ahmed_ibn_ali
+      - type: student_of
+        target: ibn_al_haytham
+
+  - id: al_ghazali
+    name:
+      en: Abu Hamid al-Ghazali
+      ar: أبو حامد الغزالي
+    born: 1058
+    died: 1111
+    categories:
+      - kalam
+      - fiqh
+      - philosophy
+    description:
+      en: >
+        One of the most influential Muslim theologians, philosophers, and
+        jurists. His "Incoherence of the Philosophers" challenged Aristotelian
+        philosophy, while his "Revival of the Religious Sciences" remains
+        a masterpiece of Islamic spirituality and ethics.
+      ar: >
+        أحد أكثر علماء المسلمين تأثيراً في اللاهوت والفلسفة والفقه.
+        تحدّى كتابه "تهافت الفلاسفة" الفلسفة الأرسطية، بينما يبقى
+        كتابه "إحياء علوم الدين" تحفة في الروحانية والأخلاق الإسلامية.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Al-Ghazali
+      ar: https://ar.wikipedia.org/wiki/أبو_حامد_الغزالي
+    relations:
+      - type: influenced
+        target: ibn_rushd
+
+  - id: ibn_rushd
+    name:
+      en: Ibn Rushd (Averroes)
+      ar: ابن رشد
+    born: 1126
+    died: 1198
+    categories:
+      - philosophy
+      - fiqh
+      - medicine
+    description:
+      en: >
+        Andalusian Muslim polymath and jurist. His extensive commentaries
+        on Aristotle earned him the title "The Commentator" and profoundly
+        influenced both Islamic and European medieval thought. He wrote
+        "The Incoherence of the Incoherence" in response to al-Ghazali.
+      ar: >
+        عالم موسوعي وفقيه أندلسي. أكسبته شروحاته المستفيضة على أرسطو
+        لقب "الشارح" وأثّرت تأثيراً عميقاً في الفكر الإسلامي والأوروبي
+        في العصور الوسطى. ألّف "تهافت التهافت" رداً على الغزالي.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Averroes
+      ar: https://ar.wikipedia.org/wiki/ابن_رشد
+    relations:
+      - type: influenced
+        target: al_ghazali
+
+  - id: saladin
+    name:
+      en: Salah ad-Din (Saladin)
+      ar: صلاح الدين الأيوبي
+    born: 1137
+    died: 1193
+    categories:
+      - authority
+    description:
+      en: >
+        The first sultan of Egypt and Syria, founder of the Ayyubid dynasty.
+        Known for recapturing Jerusalem during the Crusades and his
+        chivalrous conduct toward his adversaries.
+      ar: >
+        أول سلطان لمصر والشام، مؤسس الدولة الأيوبية.
+        معروف باستعادة القدس خلال الحروب الصليبية وبسلوكه
+        الفروسي تجاه خصومه.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Saladin
+      ar: https://ar.wikipedia.org/wiki/صلاح_الدين_الأيوبي
+
+  - id: ibn_khaldun
+    name:
+      en: Ibn Khaldun
+      ar: ابن خلدون
+    born: 1332
+    died: 1406
+    categories:
+      - philosophy
+      - authority
+    description:
+      en: >
+        Arab Islamic scholar, historian, and philosopher, widely considered
+        the founder of sociology and historiography. His masterwork
+        "Muqaddimah" introduced a scientific approach to the study of
+        history, analyzing the rise and fall of civilizations through
+        social cohesion (asabiyyah) and economic factors.
+      ar: >
+        عالم ومؤرخ وفيلسوف عربي إسلامي، يُعتبر على نطاق واسع مؤسس
+        علم الاجتماع والتأريخ. قدّم في كتابه "المقدمة" منهجاً علمياً
+        لدراسة التاريخ، محللاً صعود الحضارات وسقوطها من خلال
+        العصبية والعوامل الاقتصادية.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Ibn_Khaldun
+      ar: https://ar.wikipedia.org/wiki/ابن_خلدون
