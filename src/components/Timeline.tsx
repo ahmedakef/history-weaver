@@ -174,7 +174,10 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
   };
 
   return (
-    <div className="relative" ref={containerRef}>
+    <div className="relative">
+      {/* Scrollable timeline area */}
+      <div className="overflow-x-auto pb-4 scrollbar-thin" style={{ scrollbarGutter: 'stable' }}>
+        <div style={{ width: `${timelineWidth}px`, minWidth: '100%' }} ref={containerRef} className="relative">
       {/* SVG overlay for relation lines */}
       <svg className="absolute inset-0 w-full h-full pointer-events-none z-10">
         <defs>
