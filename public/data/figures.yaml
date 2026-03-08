@@ -96,14 +96,20 @@ relation_types:
 #       ar: الاسم الكامل       #   Arabic name (optional)
 #     born: 1000              # Year of birth (Gregorian)
 #     died: 1100              # Year of death (Gregorian)
-#     categories:             # One or more category ids (can be subcategories)
-#       - mathematics
+#     categories:             # One or more category ids (can be root or subcategories)
+#       - mathematics         # Example subcategory
+#       - philosophy          # Can add multiple
 #     description:            # Description supports multiple languages:
 #       en: A short bio in English
 #       ar: نبذة مختصرة بالعربية  # (optional)
+#     wikipedia:              # Optional: Wikipedia links by language
+#       en: https://en.wikipedia.org/wiki/Full_Name
+#       ar: https://ar.wikipedia.org/wiki/الاسم_الكامل  # (optional; if missing, English link is used as fallback)
 #     relations:              # Optional: connections to other people
 #       - type: father_of     # Options: father_of, mother_of, child_of, teacher_of, student_of, influenced, colleague
 #         target: other_id    # The id of the related person
+#       - type: teacher_of
+#         target: another_id
 #
 # NOTE: Figures tagged with a subcategory (e.g. "fiqh") are automatically
 #       included when filtering by any parent category (e.g. "religion").
