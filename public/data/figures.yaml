@@ -225,6 +225,10 @@ figures:
         عالم موسوعي فارسي يُعتبر أبا الطب الحديث المبكر.
         كان كتابه "القانون في الطب" مرجعًا طبيًا لقرون.
 
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Avicenna
+      ar: https://ar.wikipedia.org/wiki/ابن_سينا
+
   - id: nizam_al_mulk
     name:
       en: Nizam al-Mulk
@@ -240,6 +244,9 @@ figures:
       ar: >
         عالم ووزير فارسي في الدولة السلجوقية. أسس شبكة
         المدارس النظامية، من أوائل الجامعات في التاريخ.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Nizam_al-Mulk
+      ar: https://ar.wikipedia.org/wiki/نظام_الملك
     relations:
       - type: influenced
         target: al_ghazali
