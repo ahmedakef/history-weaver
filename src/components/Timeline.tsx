@@ -273,7 +273,8 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
                 `}
                 style={{
                   left: `${left}%`,
-                  width: `${Math.max(width, 8)}%`,
+                  width: `${Math.max(width, 2)}%`,
+                  minWidth: '150px',
                   top: `${row * 64}px`,
                 }}
                 onClick={() => setSelected(isSelected ? null : figure.id)}
