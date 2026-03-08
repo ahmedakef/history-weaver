@@ -170,7 +170,7 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
   const getRootColor = (catId: string) => rootMap.get(catId) || catId;
 
   const formatTickYear = (year: number) => {
-    return formatYear(year, calendar, lang).replace(/ (AH|CE|BCE|هـ|م|ق\.م)$/, '');
+    return formatYear(year, calendar, lang);
   };
 
   return (
