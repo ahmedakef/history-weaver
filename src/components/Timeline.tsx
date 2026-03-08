@@ -331,6 +331,7 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
                     src={selectedFigure.image}
                     alt={resolveTranslation(selectedFigure.name, lang)}
                     className="w-20 h-20 rounded-lg object-cover border shadow-sm shrink-0"
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                   />
                 )}
                 <div>
