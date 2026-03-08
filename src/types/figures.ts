@@ -27,7 +27,13 @@ export interface Figure {
   relations?: Relation[];
 }
 
+export interface CategoryDef {
+  id: Category;
+  name: Translatable;
+}
+
 export interface FiguresData {
+  categories: CategoryDef[];
   figures: Figure[];
 }
 
