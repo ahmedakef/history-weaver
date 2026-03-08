@@ -170,21 +170,39 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
     <div className="relative" ref={containerRef}>
       {/* SVG overlay for relation lines */}
       <svg className="absolute inset-0 w-full h-full pointer-events-none z-10">
+        <defs>
+          <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+            <path d="M 0 0 L 8 3 L 0 6 Z" fill="hsl(var(--primary))" fillOpacity="0.6" />
+          </marker>
+        </defs>
         <AnimatePresence>
-          {lines.map((line) => (
-            <motion.line
-              key={`${line.x1}-${line.y1}-${line.x2}-${line.y2}`}
-              x1={line.x1}
-              y1={line.y1}
-              x2={line.x2}
-              y2={line.y2}
-              stroke="hsl(var(--primary))"
-              strokeWidth={2}
-              strokeDasharray="6 4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.6 }}
-              exit={{ opacity: 0 }}
-            />
+          {lines.map((line, i) => (
+            <g key={`${line.x1}-${line.y1}-${line.x2}-${line.y2}-${i}`}>
+              <motion.path
+                d={line.path}
+                fill="none"
+                stroke="hsl(var(--primary))"
+                strokeWidth={1.5}
+                strokeDasharray="6 4"
+                markerEnd="url(#arrowhead)"
+                initial={{ opacity: 0, pathLength: 0 }}
+                animate={{ opacity: 0.5, pathLength: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              />
+              <motion.text
+                x={line.labelX}
+                y={line.labelY - 6}
+                textAnchor="middle"
+                fontSize="10"
+                fill="hsl(var(--muted-foreground))"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.7 }}
+                exit={{ opacity: 0 }}
+              >
+                {line.label}
+              </motion.text>
+            </g>
           ))}
         </AnimatePresence>
       </svg>
