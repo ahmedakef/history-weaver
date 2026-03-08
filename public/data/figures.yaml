@@ -268,6 +268,10 @@ figures:
         عالم رياضيات وفلكي وشاعر فارسي. معروف بأعماله في
         المعادلات التكعيبية ومجموعة الرباعيات الشهيرة.
 
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Omar_Khayyam
+      ar: https://ar.wikipedia.org/wiki/عمر_الخيام
+
   - id: al_biruni
     name:
       en: Abu Rayhan al-Biruni
@@ -283,6 +287,9 @@ figures:
       ar: >
         عالم موسوعي برع في الرياضيات والفلك والعلوم الطبيعية.
         حسب محيط الأرض بدقة.
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Al-Biruni
+      ar: https://ar.wikipedia.org/wiki/البيروني
     relations:
       - type: colleague
         target: ibn_sina
