@@ -70,6 +70,13 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
 
   const span = maxYear - minYear || 1;
 
+  /** Compute a pixel width for the timeline that gives each figure a readable minimum size */
+  const timelineWidth = useMemo(() => {
+    // At least 150px per 50-year span, minimum 1200px
+    const pxPerYear = 4;
+    return Math.max(span * pxPerYear, 1200);
+  }, [span]);
+
   const ticks = useMemo(() => {
     const step = span <= 200 ? 25 : span <= 500 ? 50 : 100;
     const arr: number[] = [];
@@ -167,7 +174,10 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
   };
 
   return (
-    <div className="relative" ref={containerRef}>
+    <div className="relative">
+      {/* Scrollable timeline area */}
+      <div className="overflow-x-auto pb-4 scrollbar-thin" style={{ scrollbarGutter: 'stable' }}>
+        <div style={{ width: `${timelineWidth}px`, minWidth: '100%' }} ref={containerRef} className="relative">
       {/* SVG overlay for relation lines */}
       <svg className="absolute inset-0 w-full h-full pointer-events-none z-10">
         <defs>
@@ -263,7 +273,8 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
                 `}
                 style={{
                   left: `${left}%`,
-                  width: `${Math.max(width, 8)}%`,
+                  width: `${Math.max(width, 2)}%`,
+                  minWidth: '150px',
                   top: `${row * 64}px`,
                 }}
                 onClick={() => setSelected(isSelected ? null : figure.id)}
@@ -293,6 +304,8 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
           })}
         </AnimatePresence>
       </div>
+        </div>{/* end inner width container */}
+      </div>{/* end scrollable area */}
 
       {/* Detail panel */}
       <AnimatePresence>

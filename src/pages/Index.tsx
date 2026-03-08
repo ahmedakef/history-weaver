@@ -79,11 +79,8 @@ const Index = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="overflow-x-auto pb-4"
           >
-            <div className="min-w-[800px]">
-              <Timeline figures={filtered} allFigures={allFigures} categoryDefs={categoryDefs} relationTypeDefs={relationTypeDefs} rootMap={rootMap} />
-            </div>
+            <Timeline figures={filtered} allFigures={allFigures} categoryDefs={categoryDefs} relationTypeDefs={relationTypeDefs} rootMap={rootMap} />
           </motion.div>
         )}
 
