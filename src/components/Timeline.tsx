@@ -78,7 +78,7 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
   }, [span]);
 
   const ticks = useMemo(() => {
-    const step = span <= 200 ? 25 : span <= 500 ? 50 : 100;
+    const step = span <= 200 ? 25 : 50;
     const arr: number[] = [];
     for (let y = minYear; y <= maxYear; y += step) arr.push(y);
     return arr;
@@ -170,7 +170,7 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
   const getRootColor = (catId: string) => rootMap.get(catId) || catId;
 
   const formatTickYear = (year: number) => {
-    return formatYear(year, calendar, lang).replace(/ (AH|CE|BCE|هـ|م|ق\.م)$/, '');
+    return formatYear(year, calendar, lang);
   };
 
   return (
