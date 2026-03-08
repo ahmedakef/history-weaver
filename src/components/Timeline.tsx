@@ -49,7 +49,7 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
   const containerRef = useRef<HTMLDivElement>(null);
   const figureRefs = useRef<Record<string, HTMLDivElement | null>>({});
   const [lines, setLines] = useState<
-    { x1: number; y1: number; x2: number; y2: number; label: string }[]
+    { x1: number; y1: number; x2: number; y2: number; path: string; labelX: number; labelY: number; label: string }[]
   >([]);
 
   const figureMap = useMemo(() => {
