@@ -285,6 +285,7 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
                       src={figure.image}
                       alt={resolveTranslation(figure.name, lang)}
                       className="w-8 h-8 rounded-full object-cover border border-border shrink-0"
+                      onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                     />
                   )}
                   <div className="flex gap-1 shrink-0">
@@ -330,6 +331,7 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
                     src={selectedFigure.image}
                     alt={resolveTranslation(selectedFigure.name, lang)}
                     className="w-20 h-20 rounded-lg object-cover border shadow-sm shrink-0"
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                   />
                 )}
                 <div>
