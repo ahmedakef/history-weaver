@@ -280,6 +280,13 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
                 onClick={() => setSelected(isSelected ? null : figure.id)}
               >
                 <div className="flex items-center gap-2 min-w-0">
+                  {figure.image && (
+                    <img
+                      src={figure.image}
+                      alt={resolveTranslation(figure.name, lang)}
+                      className="w-8 h-8 rounded-full object-cover border border-border shrink-0"
+                    />
+                  )}
                   <div className="flex gap-1 shrink-0">
                     {figure.categories.map((cat) => {
                       const root = getRootColor(cat);
