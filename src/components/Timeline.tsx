@@ -70,6 +70,13 @@ export default function Timeline({ figures, allFigures, categoryDefs, relationTy
 
   const span = maxYear - minYear || 1;
 
+  /** Compute a pixel width for the timeline that gives each figure a readable minimum size */
+  const timelineWidth = useMemo(() => {
+    // At least 150px per 50-year span, minimum 1200px
+    const pxPerYear = 4;
+    return Math.max(span * pxPerYear, 1200);
+  }, [span]);
+
   const ticks = useMemo(() => {
     const step = span <= 200 ? 25 : span <= 500 ? 50 : 100;
     const arr: number[] = [];
