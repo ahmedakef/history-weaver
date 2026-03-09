@@ -42,6 +42,7 @@ const translations: Record<Language, Record<string, string>> = {
     no_results: "لا توجد شخصيات تطابق الفلاتر المحددة",
     footer_note: "البيانات مخزنة في",
     footer_edit: "— عدّلها لإضافة المزيد من الشخصيات التاريخية",
+    search_placeholder: "ابحث عن شخصية...",
     relations: "العلاقات",
     wikipedia: "ويكيبيديا",
     language: "اللغة",
