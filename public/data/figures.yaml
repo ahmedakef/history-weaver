@@ -82,6 +82,10 @@ relation_types:
     name:
       en: Child of
       ar: ابن/ابنة
+  - id: spouse_of
+    name:
+      en: Spouse of
+      ar: زوج/زوجة
   - id: teacher_of
     name:
       en: Teacher of
@@ -277,7 +281,7 @@ figures:
     relations:
       - type: student_of
         target: prophet_muhammad
-      - type: child_of
+      - type: spouse_of
         target: fatimah
 
   - id: fatimah
@@ -296,13 +300,14 @@ figures:
       ar: >
         ابنة النبي محمد وخديجة، زوجة علي بن أبي طالب وأم الحسن
         والحسين. من أجلّ النساء في الإسلام وشخصية محورية في آل البيت.
+    image: https://upload.wikimedia.org/wikipedia/commons/3/33/FatimaalZahra_%28cropped%29.jpg
     wikipedia:
       en: https://en.wikipedia.org/wiki/Fatimah
       ar: https://ar.wikipedia.org/wiki/فاطمة_الزهراء
     relations:
       - type: child_of
         target: prophet_muhammad
-      - type: mother_of
+      - type: spouse_of
         target: ali
 
   - id: aisha
