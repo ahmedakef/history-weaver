@@ -23,6 +23,7 @@ const translations: Record<Language, Record<string, string>> = {
     no_results: "No figures match the selected filters",
     footer_note: "Data is stored in",
     footer_edit: "— edit it to add more historical figures",
+    search_placeholder: "Search figures...",
     relations: "Relations",
     wikipedia: "Wikipedia",
     
