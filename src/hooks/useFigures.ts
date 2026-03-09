@@ -1,9 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import { loadFigures } from "@/lib/loadFigures";
-import { buildCategoryMaps } from "@/types/figures";
+import { buildCategoryMaps, resolveTranslation } from "@/types/figures";
 import { useMemo } from "react";
 
-export function useFigures(activeCategories: string[]) {
+export function useFigures(activeCategories: string[], searchQuery: string = "", lang: string = "en") {
   const query = useQuery({
     queryKey: ["figures"],
     queryFn: loadFigures,
@@ -29,12 +29,23 @@ export function useFigures(activeCategories: string[]) {
     return expanded;
   }, [activeCategories, descendantsMap]);
 
-  const filtered =
-    activeCategories.length === 0
+  const filtered = useMemo(() => {
+    let result = activeCategories.length === 0
       ? allFigures
       : allFigures.filter((f) =>
           f.categories.some((c) => expandedCategories.has(c))
         );
+
+    if (searchQuery.trim()) {
+      const q = searchQuery.trim().toLowerCase();
+      result = result.filter((f) => {
+        const name = resolveTranslation(f.name, lang).toLowerCase();
+        return name.includes(q);
+      });
+    }
+
+    return result;
+  }, [allFigures, activeCategories, expandedCategories, searchQuery, lang]);
 
   return { ...query, allFigures, filtered, categoryDefs, relationTypeDefs, rootMap };
 }

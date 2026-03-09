@@ -5,10 +5,13 @@ import Timeline from "@/components/Timeline";
 import LanguageCalendarControls from "@/components/LanguageCalendarControls";
 import { motion } from "framer-motion";
 import { useI18n } from "@/lib/i18n";
+import { Input } from "@/components/ui/input";
+import { Search } from "lucide-react";
 
 const Index = () => {
   const [activeCategories, setActiveCategories] = useState<string[]>([]);
-  const { t, dir } = useI18n();
+  const [searchQuery, setSearchQuery] = useState("");
+  const { t, dir, lang } = useI18n();
 
   const toggleCategory = useCallback((cat: string) => {
     setActiveCategories((prev) =>
@@ -17,7 +20,7 @@ const Index = () => {
   }, []);
 
   const { filtered, allFigures, isLoading, error, categoryDefs, relationTypeDefs, rootMap } =
-    useFigures(activeCategories);
+    useFigures(activeCategories, searchQuery, lang);
 
   return (
     <div className="min-h-screen bg-background" dir={dir}>
@@ -43,6 +46,15 @@ const Index = () => {
             >
               <LanguageCalendarControls />
             </motion.div>
+          </div>
+          <div className="relative mt-3 max-w-md">
+            <Search className="absolute start-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+            <Input
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder={t("search_placeholder")}
+              className="ps-9"
+            />
           </div>
         </div>
       </header>
