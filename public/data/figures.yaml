@@ -728,6 +728,61 @@ figures:
       - type: teacher_of
         target: abu_dawud
 
+  - id: abu_hurairah
+    name:
+      en: Abu Hurairah
+      ar: أبو هريرة
+    born: 603
+    died: 679
+    categories:
+      - islam
+      - hadith
+    description:
+      en: >
+        A companion of the Prophet Muhammad and the most prolific narrator 
+        of Hadith. He spent years in the company of the Prophet and is 
+        considered a key source for Islamic jurisprudence.
+      ar: >
+        صحابي جليل من رفقاء النبي محمد، ويعد أكثر الصحابة رواية للحديث 
+        النبوي على الإطلاق. لازم النبي لسنوات وكان حافظاً كبيراً ومصدراً 
+        رئيسياً للتشريع الإسلامي.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Calligraphy_of_Abu_Hurairah.svg/330px-Calligraphy_of_Abu_Hurairah.svg.png
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Abu_Hurairah
+      ar: https://ar.wikipedia.org/wiki/أبو_هريرة
+    relations:
+      - type: student_of
+        target: prophet_muhammad
+
+  - id: aisha_bint_abi_bakr
+    name:
+      en: Aisha bint Abi Bakr
+      ar: عائشة بنت أبي بكر
+    born: 613
+    died: 678
+    categories:
+      - islam
+      - hadith
+      - scholar
+    description:
+      en: >
+        One of the wives of Prophet Muhammad and the "Mother of the Believers". 
+        She was a leading scholar in Hadith, jurisprudence, and poetry, 
+        narrating over 2,000 traditions.
+      ar: >
+        زوجة النبي محمد وأم المؤمنين، كانت من أبرز الفقيهات والمحدثات 
+        في التاريخ الإسلامي، روت أكثر من ألفي حديث ونقلت الكثير من 
+        تفاصيل حياة النبي الخاصة والأحكام الشرعية.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Aisha_calligraphy.svg/330px-Aisha_calligraphy.svg.png
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Aisha
+      ar: https://ar.wikipedia.org/wiki/عائشة_بنت_أبي_بكر
+    relations:
+      - type: child_of
+        target: abu_bakr
+      - type: spouse_of
+        target: prophet_muhammad
+
   - id: al_bukhari
     name:
       en: Imam al-Bukhari
@@ -1691,6 +1746,29 @@ figures:
         target: newton
 
   # ---- Modern Physics & Computer Science ----
+  - id: ahmed_zewail
+    name:
+      en: Ahmed Zewail
+      ar: أحمد زويل
+    born: 1946
+    died: 2016
+    categories:
+      - science
+      - modern
+    description:
+      en: >
+        An Egyptian-American scientist known as the "father of 
+        femtochemistry". He was awarded the 1999 Nobel Prize in Chemistry 
+        for his work on femtochemistry.
+      ar: >
+        عالم كيميائي مصري أمريكي حصل على جائزة نوبل في الكيمياء عام 1999 
+        لأبحاثه في "كيمياء الفيمتو"، حيث قام بابتكار ميكروسكوب يقوم بتصوير 
+        التفاعلات الكيميائية في زمن الفيمتو ثانية.
+    image: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Ahmed_Zewail_at_Malmo.jpg/330px-Ahmed_Zewail_at_Malmo.jpg
+    wikipedia:
+      en: https://en.wikipedia.org/wiki/Ahmed_Zewail
+      ar: https://ar.wikipedia.org/wiki/أحمد_زويل
+
 
   - id: alan_turing
     name:
