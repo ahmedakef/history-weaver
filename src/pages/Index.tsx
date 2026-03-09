@@ -47,8 +47,16 @@ const Index = () => {
               <LanguageCalendarControls />
             </motion.div>
           </div>
+          <div className="relative mt-3 max-w-md">
+            <Search className="absolute start-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+            <Input
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder={t("search_placeholder")}
+              className="ps-9"
+            />
+          </div>
         </div>
-      </header>
 
       <main className="container mx-auto px-4 py-6 sm:py-8">
         {/* Filters */}
